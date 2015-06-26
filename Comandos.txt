@@ -1,0 +1,346 @@
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaauuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuiiiiiiiiiiiiiiiii
+
+Comandos rotineiros GIT ----
+
+cd ~/ pasta
+
+
+git init : Transforma o diretorio(pasta/conteudo) 
+em um repositorio GIT.
+
+
+git clone URL: Clonar um projeto no git hub.
+
+Pode ser clonado dessa forma criando uma pasta no final:
+
+git clone https://github.com/Ronaldo-Maciel/Treina-Git.git outro (outro é a pasta ja criada). Antes de clonar deve entrar no diretorio raiz : cd ~ .
+
+
+git add . :Rastrear todos os arquivos
+
+
+git add algo: Rastreia apenas algo.
+
+
+git commit -m "frase commit" : Gravar o arquivo no repositorio.
+
+Após toda midificação, será necessário rastrea-la novamente e commitar. Para isso use git status para ver o arquivo alterado, após git add para adicionar novamente esse arquivo, e depois o comando git commit -m para implementar a mudança no repositorio.
+
+Apontar projeto para o repositorio GitHub:
+
+git remote add origin URL
+
+Para enviar as mudanças para o server:
+
+git push origin master : Forneça user e password.
+
+git pull  : Obter dados atualizados . Use ele antes de enviar o git push.
+
+
+git commit -am "Frase do commit" : Faz a add e o M de commitar ao mesmo tempo. Adiciona a mudança, e commita no repositorio
+
+git log : Historico de commits
+
+git log -n 2 : Só ira mostrar as duas ultimas modicficações.
+
+
+git branch -d loja
+Deve aparecer uma mensagem como a seguir:
+Deleted branch loja (was b92285b).
+
+
+Para removermos a branch loja se tivermos feito algum commit, devemos
+utilizar a opção -D:
+$ git branch -D loja
+
+git log --oneline : mostra um resumo em linhas, mais organizado.
+
+
+Podemos mostrar um resumo dos arquivos alterados, com o número de
+linhas adicionadas e removidas, através da opção --stat.
+$ git log --stat
+
+Para sair do git log : Aperte Q.
+
+A remoção do arquivo e adição na stage podem ser realizadas de uma vez
+só através do comando:
+$ git rm produtos.html
+
+
+Renomear aquivo : git mv estilos.css principal.css
+
+git mv principal.js js/principal.js
+
+Logo de manhã, o dono da empresa liga arrependido, pedindo para desfazermos
+as alterações.
+
+Como podemos fazer de maneira fácil?
+
+Devemos executar o seguinte comando:
+$ git checkout -- index.html
+
+O comando git checkout desfaz as alterações ainda não rastreadas,
+
+ou seja, que ainda não estão na área de stage, 
+voltando ao conteúdo anterior
+
+do arquivo.
+
+
+Se quisermos voltar atrás, desfazendo as alterações no repositório, podemos
+utilizar o comando:
+$ git revert --no-edit 6111116
+
+
+git branch design : Cria um branch design
+
+git checkout design : Seleciona o branch
+
+Criar branch e usa-la ao mesmo tempo : git checkout -b loja
+
+
+$ git branch --no-merged
+Teríamos a seguinte saída:
+design
+Isso indica que há mudanças ainda não mescladas na branch design
+
+
+
+Para juntarmos todas as alterações que fizemos na branch design com
+as da branch master, mesclando as duas, podemos utilizar o comando:
+$ git merge design -m "Mesclando com a branch design"
+
+
+Há uma maneira alternativa de mesclar as alterações de duas branches
+que simplifica o histórico do projeto. Considerando que estamos na branch
+master, em vez de utilizar git merge, é possível utilizar:
+$ git rebase design
+
+Quando voce mudar de PC, ou seu colega clonar o projeto. Para alterar a branch criada devera fazer o seguinte código:
+
+git checkout -b design origin/design
+
+Quando estivermos prontos para fazer uma entrega, podemos marcá-la
+criando uma tag e, depois, enviando essa tag para o repositório central:
+$ git tag v1.0
+$ git push origin --tags
+
+
+SASS : sass --watch sass/style.scss:style.css
+
+.menu {
+	ul {
+		width:100%;
+		li {
+			float:left;
+			a {
+				display:block;
+				padding:10px;
+			}
+		}
+	}
+}
+
+a{
+	display:block;
+	padding:10px;
+	
+	&:hover{
+		background:red;
+	}
+	
+	&:active{
+		background:blue;
+	}
+}
+
+%qualquer-coisa{
+	font-size: 18px;
+}
+ 
+body{
+	@extend %qualquer-coisa;
+}
+.classe{
+	@extend %qualquer-coisa;	
+}
+Com isso, o sass entende que você quer estender as propriedades de %qualquer-coisa para body e .classe, o que irá gerar o seguinte CSS:
+
+
+1
+2
+3
+body, .classe {
+  font-size: 18px;
+
+
+$cor-fundo: #fff;
+ 
+body{
+	background: $cor-fundo;
+	
+	@if lightness($cor-fundo) < 50 {
+		color: #ffffff;
+	} @else {
+		color: #000000;	
+	}
+}
+
+@for $i from 1 through 10 {
+	.elemento-#{$i} { 
+		width: 10px * $i; 
+	}
+}
+Isso geraria o seguinte:
+
+
+.elemento-1 {
+  width: 10px;
+}
+ 
+.elemento-2 {
+  width: 20px;
+}
+
+E assim sucessivamente 
+--- --- --- --- 
+
+
+@each $elemento in 'gol', 'fiat', 'uno' {
+	.#{$elemento}{
+		background: url('images/icon-#{$elemento}.jpg');
+	}
+}
+Acima eu falo que a cada (@each) elemento ($elemento) em (in) 'gol', 'fiat' e 'uno', este elemento terá uma imagem de fundo correspondente.
+
+Isso irá gerar o seguinte:
+
+
+
+.gol {
+  background: url("images/icon-gol.jpg");
+}
+ 
+.fiat {
+  background: url("images/icon-fiat.jpg");
+}
+ 
+.uno {
+  background: url("images/icon-uno.jpg");
+}
+
+
+@mixin, exemplo:
+
+
+
+.header-text{
+	width: 500px;
+	height:500px;
+	background:red;
+	
+	@include fonte-grande();
+}
+ 
+.sidebar h3, .footer h3{
+	@include fonte-grande();
+}
+Isso irá gerar o seguinte CSS:
+
+
+
+.header-text {
+  width: 500px;
+  height: 500px;
+  background: red;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+ 
+.sidebar h3, .footer h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+Perceba que tudo o que está no @mixin, também está onde você utilizou a palavra @include.
+
+Além disso, você também pode utilizar argumentos em um @mixin, exemplo:
+
+
+@mixin fonte-nova( $cor, $estilo ){
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $cor;
+	font-style: $estilo;
+}
+ 
+.header-text{
+	@include fonte-nova(red, italic);
+}
+ 
+.sidebar h2{
+	@include fonte-nova(black, normal);
+}
+ 
+.footer h2{
+	@include fonte-nova(#ffffff, italic);
+}
+A saída do trecho acima em CSS será o seguinte:
+
+
+
+.header-text {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: red;
+  font-style: italic;
+}
+ 
+.sidebar h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+  font-style: normal;
+}
+ 
+.footer h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  font-style: italic;
+}
+
+
+@function dobra-valor( $valor ) {
+	$valor: $valor * 2;
+	@return $valor;
+}
+ 
+.pesquisa {
+	width: dobra-valor( 300px );
+}
+Nesse caso, criei uma função que dobra e retorna qualquer valor enviado. A saída no trecho acima será conforme o esperado:
+
+
+.pesquisa {
+  width: 600px;
+}
+
+
+
+<script src="js/jquery.min.js"> </script>
+<script>
+	$(document).ready(function(){
+    $('div').mouseenter(function(){
+        $('div').fadeTo('fast', 1);
+    });
+    $('div').mouseleave(function(){
+        $('div').fadeTo('fast', 0.5);
+    });
+});
+</script>

@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+strong {
+  font-weight: 900; }
+
+header {
+  transition: all 0.50s ease 0s; }
+
+.fixed {
+  position: fixed !important;
+  background-color: #4BBDB8;
+  z-index: 9999;
+  top: 0;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s; }
+
+.fraseP, .btn-P {
+  text-align: center; }
+
+.container, .fraseP, .btn-P, .pc, .frase {
+  margin-left: auto;
+  margin-right: auto; }
+
+.icone-menu span, .icone-menu span::after, .icone-menu span::before, .fraseP, .btn-P {
+  display: block; }
+
+.logo img, .icone-menu, .fraseP {
+  margin: 15px; }
+
+body {
+  font-family: "Lato", arial, sans-serif;
+  color: #fff;
+  background-color: #52B3D9; }
+
+.container {
+  width: 100%;
+  position: relative; }
+
+.logo img {
+  width: 40%;
+  max-width: 123px; }
+
+.slogan {
+  display: block;
+  position: relative;
+  top: -15px;
+  left: 12px;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 0.10em;
+  width: 150px; }
+
+.icone-menu {
+  position: absolute;
+  right: 0px;
+  top: 35px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-indent: -9999px;
+  z-index: 9999; }
+
+.icone-menu span, .icone-menu span::after, .icone-menu span::before {
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #fff;
+  content: ''; }
+
+.icone-menu span::before {
+  bottom: -9px; }
+
+.icone-menu span::after {
+  bottom: -18px; }
+
+.menu {
+  display: none;
+  background-color: #4BBDB8;
+  position: absolute;
+  width: 100%;
+  z-index: 9999; }
+
+.fraseP {
+  font-weight: 300;
+  font-size: 1.4em; }
+
+.btn-P {
+  width: 190px;
+  padding: 10px;
+  background-color: #64C6E6;
+  font-weight: 900;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.90em;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+
+.btn-P:hover {
+  background-color: #4BBDB8; }
+
+.grid-full {
+  width: 100%; }
+
+.pc {
+  background-image: url(../imagens/notebook_banner.svg);
+  background-size: cover;
+  width: 200px;
+  height: 150px;
+  position: relative;
+  bottom: -30px;
+  z-index: 10; }
+
+.frase {
+  padding: 40px 10px;
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  font-weight: 300; }
+
+.mini-banner {
+  background-color: #000; }
+
+/*# sourceMappingURL=style.css.map */
