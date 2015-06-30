@@ -344,3 +344,8 @@ Nesse caso, criei uma função que dobra e retorna qualquer valor enviado. A saída
     });
 });
 </script>
+
+background-color: #6cceec;
+    background-image: -webkit-linear-gradient(#6cceec 12%,#f37074);
+    background-image: -webkit-linear-gradient(#6cceec 12%, #f37074);
+    background-image: linear-gradient(#6cceec 12%,#f37074);

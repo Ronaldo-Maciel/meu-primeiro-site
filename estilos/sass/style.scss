@@ -23,7 +23,7 @@ header {
 }
 
 $color-padrao: #fff;
-$fundo-padrao: #52B3D9;
+$fundo-padrao: #5ACBE3;
 $container: 100%;
 $fonte-padrao:'Lato';
 
@@ -54,7 +54,8 @@ body {
 
 	font-family: $fonte-padrao, arial, sans-serif;
 	color: $color-padrao;
-	background-color: $fundo-padrao;	
+	background-color: $fundo-padrao;
+	background-image:url(../imagens/texture-body.png), radial-gradient(rgba(255,255,255,.4),rgba(255,255,255,.0)); 	
 }
 .container {
 	
@@ -125,14 +126,15 @@ body {
 	@extend %block;
 	width:190px;
 	padding: 10px;
-	background-color: #64C6E6;
+	background-color: transparent;
 	font-weight: 900;
 	@extend %text-center;
 	@extend %center;
 	text-decoration: none;
+	border: solid #fff 1px;
 	color:$color-padrao;
 	text-transform: uppercase;
-	font-size: 0.90em;
+	font-size: 0.80em;
 	-webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -ms-transition: all 0.3s ease 0s;
@@ -141,6 +143,9 @@ body {
 }
 .btn-P:hover{
 	background-color: #4BBDB8;
+	border-color: #4BBDB8;
+	color:#fff;
+
 }
 .grid-full {
 	
@@ -163,9 +168,14 @@ body {
 	line-height: 1.2em;
 	font-weight: 300;
 	@extend %center;
+	max-width: 320px;
 }
 .mini-banner{
-	background-color: #000;
+	background-color: #fff;
+	color:#2D3134 ;
+}
+.mini-banner strong {
+	color:#5ACBE3;
 }
 
 

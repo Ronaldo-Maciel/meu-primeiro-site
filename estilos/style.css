@@ -35,7 +35,8 @@ header {
 body {
   font-family: "Lato", arial, sans-serif;
   color: #fff;
-  background-color: #52B3D9; }
+  background-color: #5ACBE3;
+  background-image: url(../imagens/texture-body.png), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)); }
 
 .container {
   width: 100%;
@@ -94,12 +95,13 @@ body {
 .btn-P {
   width: 190px;
   padding: 10px;
-  background-color: #64C6E6;
+  background-color: transparent;
   font-weight: 900;
   text-decoration: none;
+  border: solid #fff 1px;
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.90em;
+  font-size: 0.80em;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -107,7 +109,9 @@ body {
   transition: all 0.3s ease 0s; }
 
 .btn-P:hover {
-  background-color: #4BBDB8; }
+  background-color: #4BBDB8;
+  border-color: #4BBDB8;
+  color: #fff; }
 
 .grid-full {
   width: 100%; }
@@ -126,9 +130,14 @@ body {
   text-align: center;
   font-size: 0.9em;
   line-height: 1.2em;
-  font-weight: 300; }
+  font-weight: 300;
+  max-width: 320px; }
 
 .mini-banner {
-  background-color: #000; }
+  background-color: #fff;
+  color: #2D3134; }
+
+.mini-banner strong {
+  color: #5ACBE3; }
 
 /*# sourceMappingURL=style.css.map */
