@@ -5,25 +5,10 @@
    -moz-box-sizing: border-box;
    box-sizing: border-box;
 }
-strong{
-	
-	font-weight: 900;
-}
-header {
-	transition: all 0.50s ease 0s;
-}
-.fixed {
-	position: fixed !important;
-	background-color:  #4BBDB8;
-	z-index: 9999;
-	top:0;
-	-webkit-transition: all 0.4s ease 0s;
-	-moz-transition: all 0.4s ease 0s;
-	transition: all 0.4s ease 0s;
-}
-
 $color-padrao: #fff;
 $fundo-padrao: #5ACBE3;
+$color-verde: #4BBDB8;
+$color-black:#81878C;
 $container: 100%;
 $fonte-padrao:'Lato';
 
@@ -48,10 +33,32 @@ $fonte-padrao:'Lato';
     width: $width;
     height: $height;
 }
+figure {
+	margin:0;
+	padding:0;
+}
+strong{
+	
+	font-weight: 900;
+}
+header {
+	transition: all 0.50s ease 0s;
+}
+.fixed {
+	position: fixed !important;
+	background-color: $color-verde;
+	z-index: 9999;
+	top:0;
+	-webkit-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+
 
 
 body {
-
+	font-size:100%;
 	font-family: $fonte-padrao, arial, sans-serif;
 	color: $color-padrao;
 	background-color: $fundo-padrao;
@@ -70,7 +77,7 @@ body {
 	@extend %margin-padrao;
 }
 .slogan {
-	display: block;
+	@extend %block;
 	position: relative;
 	top:-15px;
 	left:12px;
@@ -108,7 +115,7 @@ body {
 }
 .menu {
 	display:none;
-	background-color:#4BBDB8;
+	background-color:$color-verde;
 	position: absolute;
 	width: 100%;
 	z-index:9999;
@@ -122,35 +129,34 @@ body {
 	@extend %block;
 	@extend %margin-padrao;
 }
-.btn-P {
+.btn {
 	@extend %block;
 	width:190px;
 	padding: 10px;
-	background-color: transparent;
 	font-weight: 900;
 	@extend %text-center;
 	@extend %center;
 	text-decoration: none;
-	border: solid #fff 1px;
 	color:$color-padrao;
 	text-transform: uppercase;
+	position:relative;
+}
+.btnP{
+	background-color: transparent;
 	font-size: 0.80em;
+	 border: solid #fff 1px;
 	-webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
-    -ms-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+
 }
-.btn-P:hover{
-	background-color: #4BBDB8;
-	border-color: #4BBDB8;
+.btnP:hover{
+	background-color: $color-verde;
+	border-color: $color-verde;
 	color:#fff;
 
 }
-.grid-full {
-	
-	width:100%;
-}
+
 .pc {
 	background-image: url(../imagens/notebook_banner.svg);
 	background-size: cover;
@@ -164,19 +170,125 @@ body {
 .frase{
 	padding: 40px 10px;
 	text-align: center;
-	font-size: 0.9em;
-	line-height: 1.2em;
+	font-size: 1.0em;
+	line-height: 1.4em;
 	font-weight: 300;
 	@extend %center;
 	max-width: 320px;
 }
-.mini-banner{
-	background-color: #fff;
-	color:#2D3134 ;
+.intro{
+	background-color: $color-padrao;
+	color:$color-black ;
+	
 }
-.mini-banner strong {
-	color:#5ACBE3;
+.intro strong {
+	color:$fundo-padrao;
 }
+.intro-port {
+	background-color:#2c3e50;
+	color:$color-black;
+	border-top:1px dashed #F3F5F6 ;
+	position:relative;
+	}
+.intro-port h2{
+	font-size:2.5em;
+	text-transform:uppercase;
+	color:#fff;
+}
+.intro-port span{
+	font-size:0.57em;
+	@extend %block;
+	line-height:1.4em;
+	display:none;
+}
+.intro-port::after {
+	@extend %block;
+	border-left: 12px solid transparent;
+  	border-right: 12px solid transparent;
+  	border-top: 12px solid #1b2631;
+  	position:absolute;
+  	left:46%;
+  	bottom:30px;
+  	content:'';
+}
+#portfolio{
+	background-color:#2c3e50;
+}
+.bloco figure{
+	
+	padding-bottom:20px;
+}
+.linha{
+	width:100%;
+	border-top:2px dotted #1b2631 ;
+	border-bottom:0;
+	border-left:0;
+	border-right:0;
+	background-color:#2c3e50;
+	margin-bottom:40px;
+}
+
+.bloco  img{
+	width:300px;
+	@extend %center;
+	@extend %block;
+	
+}
+.bloco figcaption{
+	padding:5px;
+	@extend %text-center;
+}
+.bloco figcaption h3 {
+	color:$color-verde;
+	text-transform:uppercase;
+	font-size:1.6em;
+}
+.bloco h3 span::before{
+	content:'- - - - ';
+	@extend %block;
+	color:#1b2631;
+	font-size:2em;
+	font-weight:900;
+}
+.bloco h3 span {
+	color: #fff;
+	@extend %block;
+	font-size:0.7em;
+	text-transform:none;
+	
+}
+.btnPort {
+	margin-top:20px;
+	margin-bottom:20px;
+	text-decoration: none;
+	border-radius:2px;
+	box-shadow: 0px 10px #379692;
+	-moz-transition: border .25s linear, color .25s linear, background-color .25s linear;
+	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+	transition: border .25s linear, color .25s linear, background-color .25s linear;
+    z-index:10;
+}
+.btnPort span{
+	color:$color-padrao;
+	text-transform: uppercase;
+	position:relative;
+	top:5px;
+	z-index:10;
+}
+.btnPort::after{
+	background-color:$color-verde;
+	border-radius:2px;
+	position:absolute;
+	z-index:1;
+	left:0; top:0; right:0; bottom:-6px;
+	content:'';
+}
+.btnPort:hover{
+	top:2px;
+	box-shadow:0px 8px #379692;
+}
+
+
 
 
 

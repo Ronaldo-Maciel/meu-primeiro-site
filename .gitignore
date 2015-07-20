@@ -3,3 +3,4 @@ bower.json
 .sass-cache
 *.css.map
 reset.css
+*.db

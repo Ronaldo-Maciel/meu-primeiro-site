@@ -4,6 +4,23 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.fraseP, .btn, .bloco figcaption {
+  text-align: center; }
+
+.container, .fraseP, .btn, .pc, .frase, .bloco img {
+  margin-left: auto;
+  margin-right: auto; }
+
+.slogan, .icone-menu span, .icone-menu span::after, .icone-menu span::before, .fraseP, .btn, .intro-port span, .intro-port::after, .bloco img, .bloco h3 span::before, .bloco h3 span {
+  display: block; }
+
+.logo img, .icone-menu, .fraseP {
+  margin: 15px; }
+
+figure {
+  margin: 0;
+  padding: 0; }
+
 strong {
   font-weight: 900; }
 
@@ -19,20 +36,8 @@ header {
   -moz-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s; }
 
-.fraseP, .btn-P {
-  text-align: center; }
-
-.container, .fraseP, .btn-P, .pc, .frase {
-  margin-left: auto;
-  margin-right: auto; }
-
-.icone-menu span, .icone-menu span::after, .icone-menu span::before, .fraseP, .btn-P {
-  display: block; }
-
-.logo img, .icone-menu, .fraseP {
-  margin: 15px; }
-
 body {
+  font-size: 100%;
   font-family: "Lato", arial, sans-serif;
   color: #fff;
   background-color: #5ACBE3;
@@ -47,7 +52,6 @@ body {
   max-width: 123px; }
 
 .slogan {
-  display: block;
   position: relative;
   top: -15px;
   left: 12px;
@@ -92,29 +96,27 @@ body {
   font-weight: 300;
   font-size: 1.4em; }
 
-.btn-P {
+.btn {
   width: 190px;
   padding: 10px;
-  background-color: transparent;
   font-weight: 900;
   text-decoration: none;
-  border: solid #fff 1px;
   color: #fff;
   text-transform: uppercase;
+  position: relative; }
+
+.btnP {
+  background-color: transparent;
   font-size: 0.80em;
+  border: solid #fff 1px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s; }
 
-.btn-P:hover {
+.btnP:hover {
   background-color: #4BBDB8;
   border-color: #4BBDB8;
   color: #fff; }
-
-.grid-full {
-  width: 100%; }
 
 .pc {
   background-image: url(../imagens/notebook_banner.svg);
@@ -128,16 +130,111 @@ body {
 .frase {
   padding: 40px 10px;
   text-align: center;
-  font-size: 0.9em;
-  line-height: 1.2em;
+  font-size: 1.0em;
+  line-height: 1.4em;
   font-weight: 300;
   max-width: 320px; }
 
-.mini-banner {
+.intro {
   background-color: #fff;
-  color: #2D3134; }
+  color: #81878C; }
 
-.mini-banner strong {
+.intro strong {
   color: #5ACBE3; }
+
+.intro-port {
+  background-color: #2c3e50;
+  color: #81878C;
+  border-top: 1px dashed #F3F5F6;
+  position: relative; }
+
+.intro-port h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: #fff; }
+
+.intro-port span {
+  font-size: 0.57em;
+  line-height: 1.4em;
+  display: none; }
+
+.intro-port::after {
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #1b2631;
+  position: absolute;
+  left: 46%;
+  bottom: 30px;
+  content: ''; }
+
+#portfolio {
+  background-color: #2c3e50; }
+
+.bloco figure {
+  padding-bottom: 20px; }
+
+.linha {
+  width: 100%;
+  border-top: 2px dotted #1b2631;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  background-color: #2c3e50;
+  margin-bottom: 40px; }
+
+.bloco img {
+  width: 300px; }
+
+.bloco figcaption {
+  padding: 5px; }
+
+.bloco figcaption h3 {
+  color: #4BBDB8;
+  text-transform: uppercase;
+  font-size: 1.6em; }
+
+.bloco h3 span::before {
+  content: '- - - - ';
+  color: #1b2631;
+  font-size: 2em;
+  font-weight: 900; }
+
+.bloco h3 span {
+  color: #fff;
+  font-size: 0.7em;
+  text-transform: none; }
+
+.btnPort {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  border-radius: 2px;
+  box-shadow: 0px 10px #379692;
+  -moz-transition: border .25s linear, color .25s linear, background-color .25s linear;
+  -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+  transition: border .25s linear, color .25s linear, background-color .25s linear;
+  z-index: 10; }
+
+.btnPort span {
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  top: 5px;
+  z-index: 10; }
+
+.btnPort::after {
+  background-color: #4BBDB8;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: -6px;
+  content: ''; }
+
+.btnPort:hover {
+  top: 2px;
+  box-shadow: 0px 8px #379692; }
 
 /*# sourceMappingURL=style.css.map */
