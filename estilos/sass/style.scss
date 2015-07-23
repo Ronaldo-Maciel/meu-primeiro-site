@@ -41,20 +41,14 @@ strong{
 	
 	font-weight: 900;
 }
-header {
-	transition: all 0.50s ease 0s;
-}
+
 .fixed {
 	position: fixed !important;
 	background-color: $color-verde;
 	z-index: 9999;
 	top:0;
-	-webkit-transition: all 0.4s ease 0s;
-	-moz-transition: all 0.4s ease 0s;
-	transition: all 0.4s ease 0s;
+	
 }
-
-
 
 
 body {
@@ -70,11 +64,25 @@ body {
 	width:$container;
 	position: relative;
 }
-
-.logo img{
+#logo.logo-mobile{
+	display:block;
+	width:35px;
+	max-width:35px;
+	height:16px;
+	margin:12px;
+	background-image:url(../imagens/logo-mobile.svg);
+	background-repeat:no-repeat;
+	-webkit-transition: all 0.2s ease 0s;
+	-moz-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
+}
+#logo img{
 	width:40%;
 	max-width:123px;
 	@extend %margin-padrao;
+	-webkit-transition: all 0.2s ease 0s;
+	-moz-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
 }
 .slogan {
 	@extend %block;
@@ -96,8 +104,19 @@ body {
 	cursor:pointer;
 	text-indent:-9999px;
 	z-index: 9999;
+	-webkit-transition: all 0.2s ease 0s;
+	-moz-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
 	}
 
+.icone-menu.animate{
+	top:8px;
+	margin-top:0px;
+	margin-bottom:0px;
+	-webkit-transition: all 0.2s ease 0s;
+	-moz-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
+}
 .icone-menu span, .icone-menu span::after, .icone-menu span::before {
 	position: absolute;
 	@extend %block;
@@ -121,13 +140,14 @@ body {
 	z-index:9999;
 }
 
-.fraseP {
+.principal h2 span{
 	@extend %center;
 	font-weight: 300;
 	font-size: 1.4em;
 	@extend %text-center;
 	@extend %block;
 	@extend %margin-padrao;
+	margin-bottom:15px;
 }
 .btn {
 	@extend %block;
@@ -143,7 +163,7 @@ body {
 }
 .btnP{
 	background-color: transparent;
-	font-size: 0.80em;
+	font-size: 0.8em;
 	 border: solid #fff 1px;
 	-webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -176,41 +196,43 @@ body {
 	@extend %center;
 	max-width: 320px;
 }
-.intro{
-	background-color: $color-padrao;
-	color:$color-black ;
-	
+
+.intro {
+	background-color:#fff;
+	color:$color-black;
 }
-.intro strong {
+.intro strong{
 	color:$fundo-padrao;
 }
-.intro-port {
-	background-color:#2c3e50;
-	color:$color-black;
-	border-top:1px dashed #F3F5F6 ;
-	position:relative;
-	}
-.intro-port h2{
+.titulo{
 	font-size:2.5em;
 	text-transform:uppercase;
+	@extend %text-center;
+	padding:30px 0px;
+}
+
+#portfolio h2{
 	color:#fff;
 }
-.intro-port span{
+#portfolio h2 strong::after{
+	@extend %block;
+	border-left: 12px solid transparent;
+  	border-right: 12px solid transparent;
+  	border-top: 12px solid #1b2631;
+  	width:24px;
+  	height:12px;
+  	margin-top:5px;
+  	margin-left:auto;
+  	margin-right:auto;
+  	content:'';
+}
+#portfolio .frase span{
 	font-size:0.57em;
 	@extend %block;
 	line-height:1.4em;
 	display:none;
 }
-.intro-port::after {
-	@extend %block;
-	border-left: 12px solid transparent;
-  	border-right: 12px solid transparent;
-  	border-top: 12px solid #1b2631;
-  	position:absolute;
-  	left:46%;
-  	bottom:30px;
-  	content:'';
-}
+
 #portfolio{
 	background-color:#2c3e50;
 }
@@ -267,6 +289,7 @@ body {
 	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
 	transition: border .25s linear, color .25s linear, background-color .25s linear;
     z-index:10;
+    
 }
 .btnPort span{
 	color:$color-padrao;
@@ -286,6 +309,68 @@ body {
 .btnPort:hover{
 	top:2px;
 	box-shadow:0px 8px #379692;
+}
+#servico {
+	background-color:#ECF0F1;
+	position:relative;
+}
+.gear{
+	
+	@include size(150px);
+	border-radius:150px;
+	background-color:#ECF0F1;
+	position:relative;
+	top:-120px;
+	@extend %block;
+	@extend %center;
+	z-index:0;
+	
+}
+/* CSS3 keyframes */
+@-webkit-keyframes gira {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes gira {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+.gear::after{
+	background: url(../imagens/gear.png) no-repeat 0 0;
+  	height: 46px;
+  	width: 48px;
+  	position:absolute;
+	top: 25px;
+	left:52px;
+  	@extend %block;
+  	content:'';
+
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: gira;
+  animation-name: gira;
+  -moz-animation-duration: 10s;
+  -webkit-animation-name: gira;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  
+}
+#servico h2 strong{
+	color:#2c3e50;
+	z-index:2;
+	position:relative;
 }
 
 
