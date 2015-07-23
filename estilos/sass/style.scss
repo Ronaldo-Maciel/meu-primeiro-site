@@ -64,7 +64,7 @@ body {
 	width:$container;
 	position: relative;
 }
-#logo.logo-mobile{
+#logo.logo-mobile a{
 	display:block;
 	width:35px;
 	max-width:35px;
@@ -72,17 +72,12 @@ body {
 	margin:12px;
 	background-image:url(../imagens/logo-mobile.svg);
 	background-repeat:no-repeat;
-	-webkit-transition: all 0.2s ease 0s;
-	-moz-transition: all 0.2s ease 0s;
-	transition: all 0.2s ease 0s;
+	
 }
 #logo img{
 	width:40%;
 	max-width:123px;
 	@extend %margin-padrao;
-	-webkit-transition: all 0.2s ease 0s;
-	-moz-transition: all 0.2s ease 0s;
-	transition: all 0.2s ease 0s;
 }
 .slogan {
 	@extend %block;
@@ -110,7 +105,7 @@ body {
 	}
 
 .icone-menu.animate{
-	top:8px;
+	top:9px;
 	margin-top:0px;
 	margin-bottom:0px;
 	-webkit-transition: all 0.2s ease 0s;
@@ -214,7 +209,7 @@ body {
 #portfolio h2{
 	color:#fff;
 }
-#portfolio h2 strong::after{
+#portfolio .titulo::after, #servico .titulo::after{
 	@extend %block;
 	border-left: 12px solid transparent;
   	border-right: 12px solid transparent;
@@ -224,6 +219,7 @@ body {
   	margin-top:5px;
   	margin-left:auto;
   	margin-right:auto;
+  	position:relative;
   	content:'';
 }
 #portfolio .frase span{
@@ -235,11 +231,9 @@ body {
 
 #portfolio{
 	background-color:#2c3e50;
+	padding-bottom: 80px;
 }
-.bloco figure{
-	
-	padding-bottom:20px;
-}
+
 .linha{
 	width:100%;
 	border-top:2px dotted #1b2631 ;
@@ -247,9 +241,11 @@ body {
 	border-left:0;
 	border-right:0;
 	background-color:#2c3e50;
-	margin-bottom:40px;
+	margin-bottom:20px;
 }
-
+.bloco figure{
+	padding:30px 0px;
+}
 .bloco  img{
 	width:300px;
 	@extend %center;
@@ -257,7 +253,7 @@ body {
 	
 }
 .bloco figcaption{
-	padding:5px;
+	padding:20px 5px;
 	@extend %text-center;
 }
 .bloco figcaption h3 {
@@ -265,7 +261,7 @@ body {
 	text-transform:uppercase;
 	font-size:1.6em;
 }
-.bloco h3 span::before{
+.bloco h3 span::before, #servico h3::after {
 	content:'- - - - ';
 	@extend %block;
 	color:#1b2631;
@@ -281,7 +277,6 @@ body {
 }
 .btnPort {
 	margin-top:20px;
-	margin-bottom:20px;
 	text-decoration: none;
 	border-radius:2px;
 	box-shadow: 0px 10px #379692;
@@ -314,15 +309,19 @@ body {
 	background-color:#ECF0F1;
 	position:relative;
 }
+#servico .bloco{
+	width:150px;
+	@extend %center;
+	position:relative;
+}
 .gear{
-	
+	content:'';
 	@include size(150px);
 	border-radius:150px;
 	background-color:#ECF0F1;
-	position:relative;
-	top:-120px;
+	position:absolute;
+	top:-50px;
 	@extend %block;
-	@extend %center;
 	z-index:0;
 	
 }
@@ -367,10 +366,50 @@ body {
   -moz-animation-timing-function: linear;
   
 }
-#servico h2 strong{
+#servico .titulo::after{
+	border-top: 12px solid #CDD2D3!important;
+}
+#servico h3::after{
+	color: #CDD2D3;
+	font-size: 1em;
+}
+#servico h2 strong, h3{
 	color:#2c3e50;
 	z-index:2;
 	position:relative;
+}
+#servico  li{
+	
+	@extend %text-center;
+}
+#servico  i{
+	@include size(176px);
+	@extend %block;
+	@extend %center;
+}
+.web-site {
+	background: url('../imagens/icons-servico.svg') no-repeat 1px -5px;
+}
+.emkt {
+	background: url('../imagens/icons-servico.svg') no-repeat -178px -5px;
+}
+.landing{
+	background: url('../imagens/icons-servico.svg') no-repeat -359px -5px;
+}
+#servico ul{
+	padding-top:25px;
+	padding-bottom:40px;
+}
+#servico li h3{
+	
+	font-size:1.8em;
+}
+#servico li p{
+	color: #919eab;
+}
+#servico .linha{
+	background-color:transparent;
+	border-color: #DFE4E5;
 }
 
 
