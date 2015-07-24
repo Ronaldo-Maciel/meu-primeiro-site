@@ -1,5 +1,5 @@
 
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+
 *, *:before, *:after {
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
@@ -231,6 +231,9 @@ body {
 
 #portfolio{
 	background-color:#2c3e50;
+	
+}
+#portfolio, #servico {
 	padding-bottom: 80px;
 }
 
@@ -406,13 +409,16 @@ body {
 }
 #servico li p{
 	color: #919eab;
+	padding: 0px 5px;
 }
 #servico .linha{
 	background-color:transparent;
 	border-color: #DFE4E5;
 }
-
-
+#sobre {
+	background-color:$color-verde;
+	height:600px;
+}
 
 
 
