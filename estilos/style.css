@@ -3,18 +3,27 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.principal h2 span, .btn, .titulo, .bloco figcaption, #servico li {
+.principal h2 span, .btn, .titulo, .bloco figcaption, #servico li, .btn-ler-mais {
   text-align: center; }
 
-.container, .principal h2 span, .btn, .pc, .frase, .bloco img, #servico .bloco, #servico i {
+.wrap-figure, .container, .principal h2 span, .btn, .pc, .frase, .titulo::after, .bloco figure img, #servico i, .btn-ler-mais {
   margin-left: auto;
   margin-right: auto; }
 
-.slogan, .icone-menu span, .icone-menu span::after, .icone-menu span::before, .principal h2 span, .btn, #portfolio .titulo::after, #servico .titulo::after, #portfolio .frase span, .bloco img, .bloco h3 span::before, #servico h3::after, .bloco h3 span, .gear, .gear::after, #servico i {
+i, #logo.logo-mobile a, .slogan, .icone-menu span, .icone-menu span::after, .icone-menu span::before, .principal h2 span, .btn, .titulo::after, #portfolio .frase span, .bloco figure img, .bloco h3 span::before, #servico h3::after, .bloco h3 span, .gear, .gear::after, .continue, .btn-ler-mais {
   display: block; }
 
-#logo img, .icone-menu, .principal h2 span {
+#logo.logo-mobile a, #logo img, .icone-menu, .principal h2 span {
   margin: 15px; }
+
+.wrap-figure, .container, .slogan, .btn, .pc, .titulo, .titulo::after, .btnPort span, #servico, #sobre, .btn-ler-mais {
+  position: relative; }
+
+.icone-menu, .icone-menu span, .icone-menu span::after, .icone-menu span::before, .menu, .btnPort::after, .gear, .gear::after, .ronaldo-figura, .ronaldo-figura::after, .continue {
+  position: absolute; }
+
+#portfolio, #servico, #sobre {
+  padding: 0 10px; }
 
 figure {
   margin: 0;
@@ -37,15 +46,11 @@ body {
   background-image: url(../imagens/texture-body.png), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)); }
 
 .container {
-  width: 100%;
-  position: relative; }
+  width: 100%; }
 
 #logo.logo-mobile a {
-  display: block;
   width: 35px;
-  max-width: 35px;
   height: 16px;
-  margin: 12px;
   background-image: url(../imagens/logo-mobile.svg);
   background-repeat: no-repeat; }
 
@@ -54,7 +59,6 @@ body {
   max-width: 123px; }
 
 .slogan {
-  position: relative;
   top: -15px;
   left: 12px;
   font-style: italic;
@@ -64,7 +68,6 @@ body {
   width: 150px; }
 
 .icone-menu {
-  position: absolute;
   right: 0px;
   top: 35px;
   width: 30px;
@@ -77,7 +80,7 @@ body {
   transition: all 0.2s ease 0s; }
 
 .icone-menu.animate {
-  top: 9px;
+  top: 12px;
   margin-top: 0px;
   margin-bottom: 0px;
   -webkit-transition: all 0.2s ease 0s;
@@ -85,7 +88,6 @@ body {
   transition: all 0.2s ease 0s; }
 
 .icone-menu span, .icone-menu span::after, .icone-menu span::before {
-  position: absolute;
   width: 30px;
   height: 5px;
   border-radius: 3px;
@@ -101,7 +103,6 @@ body {
 .menu {
   display: none;
   background-color: #4BBDB8;
-  position: absolute;
   width: 100%;
   z-index: 9999; }
 
@@ -116,8 +117,7 @@ body {
   font-weight: 900;
   text-decoration: none;
   color: #fff;
-  text-transform: uppercase;
-  position: relative; }
+  text-transform: uppercase; }
 
 .btnP {
   background-color: transparent;
@@ -137,7 +137,6 @@ body {
   background-size: cover;
   width: 200px;
   height: 150px;
-  position: relative;
   bottom: -30px;
   z-index: 10; }
 
@@ -159,33 +158,31 @@ body {
 .titulo {
   font-size: 2.5em;
   text-transform: uppercase;
-  padding: 30px 0px; }
+  padding: 30px 0px;
+  z-index: 2; }
 
-#portfolio h2 {
-  color: #fff; }
-
-#portfolio .titulo::after, #servico .titulo::after {
+.titulo::after {
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-top: 12px solid #1b2631;
   width: 24px;
   height: 12px;
   margin-top: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
   content: ''; }
+
+#portfolio {
+  background-color: #2c3e50; }
+
+#portfolio h2 {
+  color: #fff; }
 
 #portfolio .frase span {
   font-size: 0.57em;
   line-height: 1.4em;
   display: none; }
 
-#portfolio {
-  background-color: #2c3e50; }
-
-#portfolio, #servico {
-  padding-bottom: 80px; }
+#portfolio, #servico, #sobre {
+  padding-bottom: 100px; }
 
 .linha {
   width: 100%;
@@ -199,8 +196,9 @@ body {
 .bloco figure {
   padding: 30px 0px; }
 
-.bloco img {
-  width: 300px; }
+.bloco figure img {
+  width: 300px;
+  max-width: 300px; }
 
 .bloco figcaption {
   padding: 20px 5px; }
@@ -234,14 +232,12 @@ body {
 .btnPort span {
   color: #fff;
   text-transform: uppercase;
-  position: relative;
   top: 5px;
   z-index: 10; }
 
 .btnPort::after {
   background-color: #4BBDB8;
   border-radius: 2px;
-  position: absolute;
   z-index: 1;
   left: 0;
   top: 0;
@@ -254,12 +250,10 @@ body {
   box-shadow: 0px 8px #379692; }
 
 #servico {
-  background-color: #ECF0F1;
-  position: relative; }
+  background-color: #ECF0F1; }
 
-#servico .bloco {
-  width: 150px;
-  position: relative; }
+#servico .wrap-figure {
+  width: 150px; }
 
 .gear {
   content: '';
@@ -267,7 +261,6 @@ body {
   height: 150px;
   border-radius: 150px;
   background-color: #ECF0F1;
-  position: absolute;
   top: -50px;
   z-index: 0; }
 
@@ -286,7 +279,6 @@ body {
   background: url(../imagens/gear.png) no-repeat 0 0;
   height: 46px;
   width: 48px;
-  position: absolute;
   top: 25px;
   left: 52px;
   content: '';
@@ -304,16 +296,14 @@ body {
   -moz-animation-timing-function: linear; }
 
 #servico .titulo::after {
-  border-top: 12px solid #CDD2D3 !important; }
+  border-top: 12px solid #CDD2D3; }
 
 #servico h3::after {
   color: #CDD2D3;
   font-size: 1em; }
 
-#servico h2 strong, h3 {
-  color: #2c3e50;
-  z-index: 2;
-  position: relative; }
+#servico .titulo, #servico h3 {
+  color: #2c3e50; }
 
 #servico i {
   width: 176px;
@@ -336,15 +326,80 @@ body {
   font-size: 1.8em; }
 
 #servico li p {
-  color: #919eab;
-  padding: 0px 5px; }
+  color: #919eab; }
 
 #servico .linha {
   background-color: transparent;
   border-color: #DFE4E5; }
 
 #sobre {
+  background-color: #4BBDB8; }
+
+#sobre .wrap-figure {
+  width: 250px;
+  height: 180px; }
+
+.ronaldo-figura {
+  width: 250px;
+  height: 270px;
+  border-radius: 250px;
+  padding-top: 15px;
+  overflow: hidden;
   background-color: #4BBDB8;
-  height: 600px; }
+  top: -80px;
+  /*CORRECAO PARA NAVS WEBKIT*/
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+
+.ronaldo-figura::after {
+  background: url("../imagens/ronaldo-figura.png") no-repeat -253px 0;
+  width: 250px;
+  height: 295px;
+  background-size: cover;
+  padding-top: 5px;
+  content: ''; }
+
+#sobre .titulo {
+  color: #2c3e50; }
+
+#sobre .titulo::after {
+  border-top: 12px solid #4BADA6; }
+
+#sobre p {
+  text-align: justify;
+  line-height: 1.5em;
+  padding-bottom: 15px; }
+
+.continue {
+  top: 0px;
+  width: 100%;
+  height: 120px;
+  background: -webkit-linear-gradient(bottom, rgba(75, 189, 184, 0.4), rgba(75, 189, 184, 0.8), rgba(75, 189, 184, 0.9), #4bbdb8);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, rgba(75, 189, 184, 0.4), rgba(75, 189, 184, 0.8), rgba(75, 189, 184, 0.9), #4bbdb8);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, rgba(75, 189, 184, 0.4), rgba(75, 189, 184, 0.8), rgba(75, 189, 184, 0.9), #4bbdb8);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, rgba(75, 189, 184, 0.4), rgba(75, 189, 184, 0.8), rgba(75, 189, 184, 0.9), #4bbdb8);
+  /* Standard syntax (must be last) */ }
+
+#sobre p .wrap-figure {
+  width: 100px; }
+
+.btn-ler-mais {
+  top: 30px;
+  cursor: pointer;
+  font-size: 0.8em;
+  width: 100px;
+  padding: 5px;
+  background-color: rgba(55, 150, 146, 0.7);
+  border-radius: 4px;
+  text-transform: uppercase; }
+
+.continue-texto {
+  display: none; }
+
+#sobre {
+  padding-bottom: 40px; }
 
 /*# sourceMappingURL=style.css.map */

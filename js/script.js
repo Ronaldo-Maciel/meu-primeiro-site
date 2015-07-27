@@ -2,7 +2,13 @@ $(document).ready(function(){
 	$('.icone-menu').click(function(){
 		$('.menu').slideToggle('fast');
 	});
+    
+    $('.btn-ler-mais').click(function(){
+        $('.continue-texto').slideToggle('slow');
+        $('.continue').css('display', 'none');
+    });
 });
+
     
     $(window).scroll(function () {
         if ($(this).scrollTop()) {
