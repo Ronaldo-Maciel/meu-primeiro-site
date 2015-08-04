@@ -546,7 +546,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 
 		.habilidades, .front, .back {
 			width: 100%;
-			height: 265px;
+			height: 285px;
 			
 		}
 
@@ -621,7 +621,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 	@extend %block;
 	@extend %center;
 	width:150px;
-	margin-top:50px;
+	margin-top:70px;
 }
 
 .back .icon-exp{
@@ -635,7 +635,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 .wrap-exp li{
-	margin-top:15px;
+	margin-top:20px;
 	margin-left:10px;
 	@extend %relative;
 }
@@ -789,6 +789,43 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
     -webkit-animation: jquery 2s ease-out;
     -ms-animation:jquery 2s ease-out;
     animation: jquery 2s ease-out;
+}
+
+.icon-ps{
+	background:url(../imagens/icons-habilidades.png) no-repeat 0 -155px;
+	width: 47px;
+	height: 46px;
+}
+.habilidades:hover .ps {
+    width: 80%;
+    -moz-animation: ps 2s ease-out;
+    -webkit-animation: ps 2s ease-out;
+    -ms-animation:ps 2s ease-out;
+    animation: ps 2s ease-out;
+}
+.icon-ai{
+	background:url(../imagens/icons-habilidades.png) no-repeat -51px -154px;
+	width: 47px;
+	height: 47px;
+}
+.habilidades:hover .ai {
+    width: 85%;
+    -moz-animation: ai 2s ease-out;
+    -webkit-animation: ai 2s ease-out;
+    -ms-animation:ai 2s ease-out;
+    animation: ai 2s ease-out;
+}
+.icon-ux{
+	background:url(../imagens/icons-habilidades.png) no-repeat -101px -166px;
+	width: 47px;
+	height: 26px;
+}
+.habilidades:hover .ux {
+    width: 65%;
+    -moz-animation: ux 2s ease-out;
+    -webkit-animation: ux 2s ease-out;
+    -ms-animation:ux 2s ease-out;
+    animation: ux 2s ease-out;
 }
 
 
@@ -993,5 +1030,92 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 
     100% {
         width: 70%;
+    };
+}
+
+/*ps*/
+@-moz-keyframes ps {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    };
+}
+@-webkit-keyframes ps {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    };
+}
+@keyframes ps {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    };
+}
+
+/*ai*/
+@-moz-keyframes ai {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+@-webkit-keyframes ai {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+@keyframes ai {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+
+/*ux*/
+@-moz-keyframes ux {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
+    };
+}
+@-webkit-keyframes ux {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
+    };
+}
+@keyframes ux {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
     };
 }
