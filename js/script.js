@@ -1,16 +1,5 @@
 $(document).ready(function(){
-	$('.icone-menu').click(function(){
-		$('.menu').slideToggle('fast');
-	});
-   
-    $('.btn-ler-mais').click(function(){
-        $('.continue-texto').slideToggle('slow');
-        $('.continue').css('display', 'none');
-    });
-
-});
-
-    
+// menu fixed
     $(window).scroll(function () {
         if ($(this).scrollTop()) {
             $('header').addClass('fixed');
@@ -27,14 +16,35 @@ $(document).ready(function(){
 
         }
     });
+// fim menu fixed
 
-// Javascript Correcao Internet Explorer//
-var UA = navigator.userAgent;
-var html = document.documentElement;
-if (UA.indexOf("IEMobile") === -1) {
-    if ((UA.indexOf("rv:11.") !== -1) && (!html.classList.contains('ie11')) && window.navigator.msPointerEnabled) {
-        html.classList.add("ie11");
-    } else if ((UA.indexOf("MSIE 10.") !== -1) && (!html.classList.contains('ie10')) && window.navigator.msPointerEnabled) {
-        html.classList.add("ie10");
-    }
-}
+// menu mobile
+	$('.icone-menu').click(function(){
+		$('.menu').slideToggle('fast');
+	});
+   
+    $('.btn-ler-mais').click(function(){
+        $('.continue-texto').slideToggle('slow');
+        $('.continue').css('display', 'none');
+    });
+// fim menu mobile
+
+// Touch start mudar icone ronaldo
+     $('#sobre').on('touchstart', function(){
+      
+        $('.icon-figura').addClass('hover');
+    });
+     var sobre= $("#sobre") ;
+    $("body").on('touchstart', function (e) {
+        if (sobre.has(e.target).length || e.target == sobre[0])
+            return;
+        $( ".icon-figura" ).removeClass("hover"); 
+    });
+// FIM Touch start //
+});
+
+
+
+
+    
+    

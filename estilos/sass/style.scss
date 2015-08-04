@@ -351,6 +351,22 @@ body {
         -webkit-transform: rotate(360deg);
     }
 }
+@-moz-keyframes gira {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@keyframes gira {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .gear::after{
 	background: url(../imagens/gear.png) no-repeat 0 0;
   	height: 46px;
@@ -435,8 +451,14 @@ body {
 	/*CORRECAO PARA NAVS WEBKIT*/
 	-webkit-transform: translateZ(0); transform: translateZ(0);	
 }
-.ronaldo-figura::after{
-	background: url('../imagens/ronaldo-vetor.svg') no-repeat -253px 0;
+.icon-figura{
+background: url('../imagens/ronaldo-vetor.svg') no-repeat -260px 0;	
+}
+#sobre:hover .icon-figura, .icon-figura.hover{
+background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
+}
+.icon-figura, #sobre:hover .icon-figura, .icon-figura.hover{
+	@extend %block;
 	width: 250px;
 	height: 295px;
 	background-size:cover;
@@ -444,9 +466,9 @@ body {
 	padding-top:5px;
 	content:'';
 }
+
 #sobre .titulo{
 	color:#2c3e50;
-	
 }
 #sobre .titulo::after{
 	border-top:12px solid #4BADA6;
@@ -501,6 +523,7 @@ body {
 	margin-top:25px;
 }
 .habilidades{
+	perspective: 1000px;
 	border-top: #D3EBEB dotted 1px;
 }
 
@@ -523,23 +546,22 @@ body {
 
 		.habilidades, .front, .back {
 			width: 100%;
-			height: 250px;
+			height: 265px;
 			
 		}
 
 		.flipper {
-			-webkit-transition: 0.6s;
+			-webkit-transition: 0.8s;
 			-webkit-transform-style: preserve-3d;
-			-ms-transition: 0.6s;
+			-ms-transition: 0.8s;
 
-			-moz-transition: 0.6s;
+			-moz-transition: 0.8s;
 			-moz-transform: perspective(1000px);
 			-moz-transform-style: preserve-3d;
 			-ms-transform-style: preserve-3d;
 
-			transition: 0.6s;
+			transition: 0.8s;
 			transform-style: preserve-3d;
-
 			position: relative;
 		}
 
@@ -577,7 +599,9 @@ body {
 		.front {
 			-webkit-transform: rotateY(0deg);
 			-ms-transform: rotateY(0deg);
+			transform: rotateY(0deg);
 			z-index: 2;
+			background-color:#4EB7AF;
 
 		}
 
@@ -589,6 +613,7 @@ body {
 		    -ms-transform: rotateY(-180deg);
 		    transform: rotateY(-180deg);
 		    background-color:#D3EBEB;
+
 		}
 
 
@@ -599,5 +624,374 @@ body {
 	margin-top:50px;
 }
 
+.back .icon-exp{
+	width:61px;
+	@extend %inline-block;
+	@extend %vertical-align;
+}
+.wrap-exp{
+	
+	margin-bottom:8px;
+}
+
+.wrap-exp li{
+	margin-top:15px;
+	margin-left:10px;
+	@extend %relative;
+}
+
+.triangulo, .triangulo::before{
+	border-right:solid #CCDBDA 1px;
+	@extend %absolute;
+}
+.triangulo{
+		height: 100%;
+		left: 55px;
+	}
+
+	.triangulo::before{
+		content: "";
+		transform: rotate(45deg);
+		border-top: 1px solid #CCDBDA;
+		width: 10px;
+		height: 10px;
+		top: 42%;
+		background-color:#D3EBEB;
+		z-index: 2;
+		left:-5px;
+	}
+.nivel, .expandir{
+	height:25px;
+	border-radius:3px;
+}
+.nivel{
+	@extend %inline-block;
+	@extend %vertical-align;
+	@extend %relative;
+	
+	background-color:#CCDBDA;
+	width:70%;
+}
+.nivel span{
+	@extend %block;
+}
+.nivel  em{
+	top:-20px;
+	left:4px;
+}
+.nivel em, .expandir span{
+	color:#255650;
+	font-size:18px;
+	@extend %relative;
+	text-transform:uppercase;
+}
+
+.expandir{
+	top:0;
+	left:0;
+	background-color:#EBF2F1;
+	position:absolute;
+	display:none;
+	
+}
+.expandir span{
+	text-align:right;
+	top:4px;
+	right:8px;
+}
+#sobre .back .linha{
+	    border-color: #CCDBDA;
+	    margin-top: 15px ;
+	    margin-bottom:10px;
+}
+.icon-html5{
+	background:url(../imagens/icons-habilidades.png) no-repeat  -51px -87px;
+	width:47px;
+	height:65px;
+}
+.habilidades:hover .html5 {
+    width: 85%;
+    -moz-animation: html5 2s ease-out;
+    -webkit-animation: html5 2s ease-out;
+    -ms-animation:html5 2s ease-out;
+    animation: html5 2s ease-out;
+}
+.icon-seo{
+	background:url(../imagens/icons-habilidades.png) no-repeat  -48px 0px;
+	width:47px;
+	height:47px;
+}
+.habilidades:hover .seo {
+    width: 70%;
+    -moz-animation: seo 2s ease-out;
+    -webkit-animation: seo 2s ease-out;
+    -ms-animation:seo 2s ease-out;
+    animation: seo 2s ease-out;
+}
+
+.icon-css3{
+	background:url(../imagens/icons-habilidades.png) no-repeat 0 -86px;
+	width:47px;
+	height:66px;
+}
+.habilidades:hover .css3 {
+    width: 85%;
+    -moz-animation: css3 2s ease-out;
+    -webkit-animation: css3 2s ease-out;
+    -ms-animation:css3 2s ease-out;
+    animation: css3 2s ease-out;
+}
+.icon-bootstrap{
+	background:url(../imagens/icons-habilidades.png) no-repeat 0 0;
+	width:47px;
+	height:47px;
+}
+.habilidades:hover .bootstrap {
+    width: 90%;
+    -moz-animation: bootstrap 2s ease-out;
+    -webkit-animation: bootstrap 2s ease-out;
+    -ms-animation:bootstrap 2s ease-out;
+    animation: bootstrap 2s ease-out;
+}
+.icon-sass{
+	background:url(../imagens/icons-habilidades.png) no-repeat -103px -6px;
+	width: 47px;
+	height: 38px;
+}
+.habilidades:hover .sass {
+    width: 65%;
+    -moz-animation: sass 2s ease-out;
+    -webkit-animation: sass 2s ease-out;
+    -ms-animation:sass 2s ease-out;
+    animation: sass 2s ease-out;
+}
+.icon-js{
+	background:url(../imagens/icons-habilidades.png) no-repeat -104px -87px;
+	width: 47px;
+	height: 65px;
+}
+.habilidades:hover .js {
+    width: 60%;
+    -moz-animation: js 2s ease-out;
+    -webkit-animation: js 2s ease-out;
+    -ms-animation:js 2s ease-out;
+    animation: js 2s ease-out;
+}
+
+.icon-jquery{
+	background:url(../imagens/icons-habilidades.png) no-repeat -53px -51px;
+	width: 47px;
+	height: 29px;
+}
+.habilidades:hover .jquery {
+    width: 70%;
+    -moz-animation: jquery 2s ease-out;
+    -webkit-animation: jquery 2s ease-out;
+    -ms-animation:jquery 2s ease-out;
+    animation: jquery 2s ease-out;
+}
 
 
+/*HTML5*/
+@-moz-keyframes html5 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+@-webkit-keyframes html5 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+@keyframes html5 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+
+/*SEO*/
+@-moz-keyframes seo {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+@-webkit-keyframes seo {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+@keyframes seo {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+
+/*css3*/
+@-moz-keyframes css3 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+@-webkit-keyframes css3 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+@keyframes css3 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    };
+}
+
+/*bootstrap*/
+
+@-moz-keyframes bootstrap {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    };
+}
+@-webkit-keyframes bootstrap {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    };
+}
+@keyframes bootstrap {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    };
+}
+
+/*sass*/
+@-moz-keyframes sass {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
+    };
+}
+@-webkit-keyframes sass {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
+    };
+}
+@keyframes sass {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65%;
+    };
+}
+
+/*js*/
+@-moz-keyframes js {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    };
+}
+@-webkit-keyframes js {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    };
+}
+@keyframes js {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    };
+}
+
+/*jquery*/
+@-moz-keyframes jquery {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+@-webkit-keyframes jquery {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
+@keyframes jquery {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    };
+}
