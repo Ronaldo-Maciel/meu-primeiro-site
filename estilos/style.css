@@ -4,14 +4,14 @@
 .principal h2 span, .btn, .titulo, .bloco figcaption, #servico li, .btn-ler-mais {
   text-align: center; }
 
-.wrap-figure, .container, .principal h2 span, .btn, .pc, .frase, .titulo::after, .bloco figure img, #servico i, .btn-ler-mais, .front img, .workflow ul {
+.wrap-figure, .container, .principal h2 span, .btn, .pc, .frase, .titulo::after, .bloco figure img, #servico i, .btn-ler-mais, .front img, .workflow ul, .conquistas ul, .conquistas ul .icon-certificado {
   margin-left: auto;
   margin-right: auto; }
 
-i, #logo.logo-mobile a, .slogan, .icone-menu span, .icone-menu span::after, .icone-menu span::before, .principal h2 span, .btn, .titulo::after, #portfolio .frase span, .bloco figure img, .bloco h3 span::before, #servico h3::after, .bloco h3 span, .gear, .gear::after, .icon-figura, #sobre:hover .icon-figura, .icon-figura.hover, .continue, .btn-ler-mais, .front img, .nivel span {
+i, #logo.logo-mobile a, .slogan, .icone-menu span, .icone-menu span::after, .icone-menu span::before, .principal h2 span, .btn, .titulo::after, #portfolio .frase span, .bloco figure img, .bloco h3 span::before, #servico h3::after, .conquistas ul h4::after, .bloco h3 span, .gear, .gear::after, .icon-figura, #sobre:hover .icon-figura, .icon-figura.hover, .continue, .btn-ler-mais, .front img, .nivel span {
   display: block; }
 
-.back .icon-exp, .nivel {
+.back .icon-exp, .nivel, .workflow ul li {
   display: inline-block;
   margin-right: -4px; }
 
@@ -21,13 +21,13 @@ i, #logo.logo-mobile a, .slogan, .icone-menu span, .icone-menu span::after, .ico
 #logo.logo-mobile a, #logo img, .icone-menu, .principal h2 span {
   margin: 15px; }
 
-.wrap-figure, .container, .slogan, .btn, .pc, .titulo, .titulo::after, .btnPort span, #servico, #sobre, .btn-ler-mais, .wrap-exp li, .nivel, .nivel em, .expandir span {
+.wrap-figure, .container, .slogan, .btn, .pc, .titulo, .titulo::after, .btnPort span, #servico, #sobre, .btn-ler-mais, .wrap-exp li, .nivel, .nivel em, .expandir span, .conquistas ul .icon-certificado span {
   position: relative; }
 
 .icone-menu, .icone-menu span, .icone-menu span::after, .icone-menu span::before, .menu, .btnPort::after, .gear, .gear::after, .ronaldo-figura, .icon-figura, #sobre:hover .icon-figura, .icon-figura.hover, .continue, .triangulo, .triangulo::before {
   position: absolute; }
 
-#portfolio, #servico, #sobre p, .workflow ul {
+#portfolio, #servico, .historia p, .workflow ul {
   padding: 0 10px; }
 
 figure {
@@ -207,8 +207,8 @@ body {
   text-transform: uppercase;
   font-size: 1.6em; }
 
-.bloco h3 span::before, #servico h3::after {
-  content: '- - - - ';
+.bloco h3 span::before, #servico h3::after, .conquistas ul h4::after {
+  content: '- - - -';
   color: #1b2631;
   font-size: 2em;
   font-weight: 900; }
@@ -370,7 +370,7 @@ body {
 #sobre .titulo::after {
   border-top: 12px solid #4BADA6; }
 
-#sobre p {
+.historia p {
   text-align: justify;
   line-height: 1.5em;
   padding-bottom: 15px; }
@@ -430,7 +430,7 @@ body {
 /* END: Comandos para  IE */
 .habilidades, .front, .back {
   width: 100%;
-  height: 285px; }
+  height: 310px; }
 
 .flipper {
   -webkit-transition: 0.8s;
@@ -481,11 +481,12 @@ body {
   -o-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
-  background-color: #D3EBEB; }
+  background-color: #D3EBEB;
+  padding: 15px 0px; }
 
 .front img {
   width: 150px;
-  margin-top: 70px; }
+  margin-top: 85px; }
 
 .back .icon-exp {
   width: 61px; }
@@ -835,12 +836,48 @@ body {
 .workflow ul {
   max-width: 310px; }
   .workflow ul li {
-    display: inline-block;
     background-color: #D3EBEB;
     padding: 5px 10px;
     color: #777;
     margin-right: 2px;
     margin-bottom: 5px;
-    word-wrap: break-word; }
+    word-wrap: break-word;
+    text-transform: capitalize; }
+
+.conquistas {
+  padding: 30px 0px; }
+
+.conquistas ul {
+  padding: 20px 10px;
+  width: 280px; }
+  .conquistas ul .icon-certificado {
+    background-image: url(../imagens/certificado.svg);
+    width: 86px;
+    height: 118px; }
+    .conquistas ul .icon-certificado span {
+      left: 25px;
+      top: 7px;
+      color: #1D4C5C;
+      font-style: italic;
+      font-size: 14px; }
+  .conquistas ul li h4 {
+    color: #FCFCFC;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-top: 20px; }
+  .conquistas ul li h4, .conquistas ul li p {
+    color: #FCFCFC;
+    text-align: center; }
+  .conquistas ul li p {
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: capitalize; }
+
+.conquistas ul h4::after {
+  color: #D3EBEB; }
+
+.conquistas .linha {
+  width: 280px; }
 
 /*# sourceMappingURL=style.css.map */

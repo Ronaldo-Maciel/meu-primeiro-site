@@ -282,8 +282,8 @@ body {
 	text-transform:uppercase;
 	font-size:1.6em;
 }
-.bloco h3 span::before, #servico h3::after{
-	content:'- - - - ';
+.bloco h3 span::before, #servico h3::after, .conquistas ul h4::after{
+	content:'- - - -';
 	@extend %block;
 	color:#1b2631;
 	font-size:2em;
@@ -473,7 +473,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 #sobre .titulo::after{
 	border-top:12px solid #4BADA6;
 }
-#sobre p{
+.historia p{
 	text-align:justify;
 	line-height:1.5em;
 	padding-bottom:15px;
@@ -546,7 +546,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 
 		.habilidades, .front, .back {
 			width: 100%;
-			height: 285px;
+			height: 310px;
 			
 		}
 
@@ -613,7 +613,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 		    -ms-transform: rotateY(-180deg);
 		    transform: rotateY(-180deg);
 		    background-color:#D3EBEB;
-
+		    padding:15px 0px;
 		}
 
 
@@ -621,7 +621,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 	@extend %block;
 	@extend %center;
 	width:150px;
-	margin-top:70px;
+	margin-top:85px;
 }
 
 .back .icon-exp{
@@ -1119,6 +1119,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
         width: 65%;
     };
 }
+
 .workflow{
 	padding:30px 0px;
 }
@@ -1127,12 +1128,63 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 		@extend %center;
 		max-width:310px;
 	li{
-		display:inline-block;
+		@extend %inline-block;
 		background-color:#D3EBEB;
 		padding:5px 10px;
 		color:#777;
 		margin-right: 2px;
     	margin-bottom: 5px;
     	word-wrap: break-word;
+    	text-transform:capitalize;
 	}
+}
+.conquistas{
+	padding:30px 0px;
+}
+.conquistas ul {
+	padding:20px 10px;
+	width:280px;
+	@extend %center;
+
+		.icon-certificado{
+		background-image:url(../imagens/certificado.svg);
+		width:86px;
+		height:118px;
+		@extend %center;
+		
+			span{
+				@extend %relative;
+				left:25px;
+				top:7px;
+				color:#1D4C5C;
+				font-style:italic;
+				font-size:14px;
+			}
+		}
+		li {
+			
+		h4 {
+			color:#FCFCFC;
+			font-size:20px;
+			text-transform:uppercase;
+			font-weight:900;
+			padding-top:20px;
+		}
+		h4, p{
+			color:#FCFCFC;
+			text-align:center;
+		}
+		p{
+			font-size:18px;
+			font-weight:300;
+			text-transform:capitalize;
+		}
+	}
+
+}
+.conquistas ul h4::after{
+	color:#D3EBEB;
+}
+.conquistas .linha{
+	width:280px;
 }
