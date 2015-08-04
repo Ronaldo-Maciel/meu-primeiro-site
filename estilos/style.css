@@ -4,7 +4,7 @@
 .principal h2 span, .btn, .titulo, .bloco figcaption, #servico li, .btn-ler-mais {
   text-align: center; }
 
-.wrap-figure, .container, .principal h2 span, .btn, .pc, .frase, .titulo::after, .bloco figure img, #servico i, .btn-ler-mais, .front img {
+.wrap-figure, .container, .principal h2 span, .btn, .pc, .frase, .titulo::after, .bloco figure img, #servico i, .btn-ler-mais, .front img, .workflow ul {
   margin-left: auto;
   margin-right: auto; }
 
@@ -27,7 +27,7 @@ i, #logo.logo-mobile a, .slogan, .icone-menu span, .icone-menu span::after, .ico
 .icone-menu, .icone-menu span, .icone-menu span::after, .icone-menu span::before, .menu, .btnPort::after, .gear, .gear::after, .ronaldo-figura, .icon-figura, #sobre:hover .icon-figura, .icon-figura.hover, .continue, .triangulo, .triangulo::before {
   position: absolute; }
 
-#portfolio, #servico, #sobre p {
+#portfolio, #servico, #sobre p, .workflow ul {
   padding: 0 10px; }
 
 figure {
@@ -408,7 +408,7 @@ body {
   border: none !important; }
 
 .wrap-habilidades {
-  margin-top: 25px; }
+  margin-top: 30px; }
 
 .habilidades {
   perspective: 1000px;
@@ -829,5 +829,18 @@ body {
     width: 0px; }
   100% {
     width: 65%; } }
+.workflow {
+  padding: 30px 0px; }
+
+.workflow ul {
+  max-width: 310px; }
+  .workflow ul li {
+    display: inline-block;
+    background-color: #D3EBEB;
+    padding: 5px 10px;
+    color: #777;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    word-wrap: break-word; }
 
 /*# sourceMappingURL=style.css.map */
