@@ -351,20 +351,14 @@ body {
         -webkit-transform: rotate(360deg);
     }
 }
-@-moz-keyframes gira {
-    0% {
-        -moz-transform: rotate(0deg);
-    }
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-}
 @keyframes gira {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
     }
 }
 .gear::after{
@@ -523,22 +517,18 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 	margin-top:30px;
 }
 .habilidades{
-	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
 	border-top: #D3EBEB dotted 1px;
 }
 
 .habilidades:hover .back, .habilidades.hover .back {
     -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
 
 .habilidades:hover .front, .habilidades.hover .front {
     -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 		
@@ -561,13 +551,13 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 			-ms-transform-style: preserve-3d;
 
 			transition: 0.8s;
-			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			        transform-style: preserve-3d;
 			position: relative;
 		}
 
 		.front, .back {
 			-webkit-backface-visibility: hidden;
-			-moz-backface-visibility: hidden;
 			-ms-backface-visibility: hidden;
 			backface-visibility: hidden;
 
@@ -588,8 +578,10 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 		    -ms-transform: rotateY(0deg);
 
 		    transition: 0.6s;
-		    transform-style: preserve-3d;
-		    transform: rotateY(0deg);
+		    -webkit-transform-style: preserve-3d;
+		            transform-style: preserve-3d;
+		    -webkit-transform: rotateY(0deg);
+		            transform: rotateY(0deg);
 
 			position: absolute;
 			top: 0;
@@ -598,7 +590,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 
 		.front {
 			-webkit-transform: rotateY(0deg);
-			-ms-transform: rotateY(0deg);
 			transform: rotateY(0deg);
 			z-index: 2;
 			background-color:#4EB7AF;
@@ -608,9 +599,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 		.back {
 			
 			-webkit-transform: rotateY(-180deg);
-		    -moz-transform: rotateY(-180deg);
-		    -o-transform: rotateY(-180deg);
-		    -ms-transform: rotateY(-180deg);
 		    transform: rotateY(-180deg);
 		    background-color:#D3EBEB;
 		    padding:15px 0px;
@@ -651,7 +639,8 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 
 	.triangulo::before{
 		content: "";
-		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		        transform: rotate(45deg);
 		border-top: 1px solid #CCDBDA;
 		width: 10px;
 		height: 10px;
@@ -711,9 +700,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .html5 {
     width: 85%;
-    -moz-animation: html5 2s ease-out;
     -webkit-animation: html5 2s ease-out;
-    -ms-animation:html5 2s ease-out;
     animation: html5 2s ease-out;
 }
 .icon-seo{
@@ -723,9 +710,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .seo {
     width: 70%;
-    -moz-animation: seo 2s ease-out;
     -webkit-animation: seo 2s ease-out;
-    -ms-animation:seo 2s ease-out;
     animation: seo 2s ease-out;
 }
 
@@ -736,9 +721,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .css3 {
     width: 85%;
-    -moz-animation: css3 2s ease-out;
     -webkit-animation: css3 2s ease-out;
-    -ms-animation:css3 2s ease-out;
     animation: css3 2s ease-out;
 }
 .icon-bootstrap{
@@ -748,9 +731,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .bootstrap {
     width: 90%;
-    -moz-animation: bootstrap 2s ease-out;
     -webkit-animation: bootstrap 2s ease-out;
-    -ms-animation:bootstrap 2s ease-out;
     animation: bootstrap 2s ease-out;
 }
 .icon-sass{
@@ -760,9 +741,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .sass {
     width: 65%;
-    -moz-animation: sass 2s ease-out;
     -webkit-animation: sass 2s ease-out;
-    -ms-animation:sass 2s ease-out;
     animation: sass 2s ease-out;
 }
 .icon-js{
@@ -772,9 +751,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .js {
     width: 60%;
-    -moz-animation: js 2s ease-out;
     -webkit-animation: js 2s ease-out;
-    -ms-animation:js 2s ease-out;
     animation: js 2s ease-out;
 }
 
@@ -785,9 +762,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .jquery {
     width: 70%;
-    -moz-animation: jquery 2s ease-out;
     -webkit-animation: jquery 2s ease-out;
-    -ms-animation:jquery 2s ease-out;
     animation: jquery 2s ease-out;
 }
 
@@ -798,9 +773,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .ps {
     width: 80%;
-    -moz-animation: ps 2s ease-out;
     -webkit-animation: ps 2s ease-out;
-    -ms-animation:ps 2s ease-out;
     animation: ps 2s ease-out;
 }
 .icon-ai{
@@ -810,9 +783,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .ai {
     width: 85%;
-    -moz-animation: ai 2s ease-out;
     -webkit-animation: ai 2s ease-out;
-    -ms-animation:ai 2s ease-out;
     animation: ai 2s ease-out;
 }
 .icon-ux{
@@ -822,23 +793,12 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .habilidades:hover .ux {
     width: 65%;
-    -moz-animation: ux 2s ease-out;
     -webkit-animation: ux 2s ease-out;
-    -ms-animation:ux 2s ease-out;
     animation: ux 2s ease-out;
 }
 
 
 /*HTML5*/
-@-moz-keyframes html5 {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 85%;
-    };
-}
 @-webkit-keyframes html5 {
     0% {
         width: 0px;
@@ -859,15 +819,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*SEO*/
-@-moz-keyframes seo {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 70%;
-    };
-}
 @-webkit-keyframes seo {
     0% {
         width: 0px;
@@ -888,15 +839,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*css3*/
-@-moz-keyframes css3 {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 85%;
-    };
-}
 @-webkit-keyframes css3 {
     0% {
         width: 0px;
@@ -917,16 +859,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*bootstrap*/
-
-@-moz-keyframes bootstrap {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 90%;
-    };
-}
 @-webkit-keyframes bootstrap {
     0% {
         width: 0px;
@@ -947,15 +879,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*sass*/
-@-moz-keyframes sass {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 65%;
-    };
-}
 @-webkit-keyframes sass {
     0% {
         width: 0px;
@@ -976,15 +899,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*js*/
-@-moz-keyframes js {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 60%;
-    };
-}
 @-webkit-keyframes js {
     0% {
         width: 0px;
@@ -1005,15 +919,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*jquery*/
-@-moz-keyframes jquery {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 70%;
-    };
-}
 @-webkit-keyframes jquery {
     0% {
         width: 0px;
@@ -1034,15 +939,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*ps*/
-@-moz-keyframes ps {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 80%;
-    };
-}
 @-webkit-keyframes ps {
     0% {
         width: 0px;
@@ -1063,15 +959,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*ai*/
-@-moz-keyframes ai {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 85%;
-    };
-}
 @-webkit-keyframes ai {
     0% {
         width: 0px;
@@ -1092,15 +979,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 
 /*ux*/
-@-moz-keyframes ux {
-    0% {
-        width: 0px;
-    }
-
-    100% {
-        width: 65%;
-    };
-}
 @-webkit-keyframes ux {
     0% {
         width: 0px;
@@ -1141,6 +1019,24 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 .conquistas{
 	padding:30px 0px;
 }
+.wrap-beca{
+	width:122px;
+	height:28px;
+	@extend %center;
+	@extend %relative;
+}
+.beca{
+	background-image:url(../imagens/beca.svg);
+	width:122px;
+	height:75px;
+	@extend %block;
+	@extend %absolute;
+	top:0px;
+	-webkit-transform: rotate(6deg);
+	-moz-transform: rotate(6deg);
+	-ms-transform: rotate(6deg);
+	        transform: rotate(6deg);
+}
 .conquistas ul {
 	padding:20px 10px;
 	width:280px;
@@ -1172,12 +1068,11 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 		}
 		h4, p{
 			color:#FCFCFC;
-			text-align:center;
+			@extend %text-center;
 		}
 		p{
 			font-size:18px;
 			font-weight:300;
-			text-transform:capitalize;
 		}
 	}
 
@@ -1187,4 +1082,102 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .conquistas .linha{
 	width:280px;
+}
+.conquistas .btnP:hover{
+	background-color:#4EB7AF;
+} 
+#contato{
+	background-color:#01212A;
+}
+#contato .titulo{
+	color:#fff;
+	background-color:#0D4F63;
+}
+#contato .titulo::after{
+	border-top-color:#0D4654;
+}
+.wrap-contato{
+	width:80%;
+	border:dashed #0D4F63 2px;
+	margin-top:30px;
+	margin-bottom:30px;
+	@extend %center;
+}
+.wrap-contato ul{
+	margin:40px 0px;
+}
+.info-contato{
+	@extend %text-center;
+	margin-top:10px;
+}
+.info-contato p{
+	padding:3px 0px;
+}
+.icon-contato{
+	padding:40px;
+	border-radius:9999px;
+	@extend %center;
+	background: url('../imagens/icons-contato.svg') no-repeat ;
+}
+.phone{
+	background-position:-250px 5px;
+	width: 31px;
+	height: 31px;
+	background-color:#F47A7E;
+}
+.email{
+	background-position: -18px 8px;;
+	width: 30px;
+	height: 23px;
+	background-color:#FED26A;
+}
+.skype{
+	background-position: -132px 7px;
+	width: 31px;
+	height: 31px;
+	background-color:#00B8ED;
+}
+.social{
+	width:142px;
+	@extend %center;
+}
+.social li{
+	@extend %inline-block;
+	margin-bottom: 80px;
+}
+.github, .linkedin{
+	width: 56px;
+	height: 56px;
+}
+.github{
+	background: url('../imagens/icons-contato.svg') no-repeat -30px -109px;
+}
+.linkedin{
+	background: url('../imagens/icons-contato.svg') no-repeat -143px -103px;
+	margin-left:20px;
+}
+.social  li span{
+	@extend %relative;
+	top:60px;
+	color:#fff;
+	text-decoration:none;
+}
+.voltar-topo{
+	background: url('../imagens/icons-contato.svg') no-repeat -257px -96px;
+	width: 61px;
+	height: 61px;
+	@extend %center;
+	@extend %block;
+	margin-bottom:20px;
+	cursor:pointer;
+}
+
+#contato .linha{
+	width:280px;
+	border-color:#0D4F63;
+}
+.copyright{
+	font-size:12px;
+	padding-bottom:40px;
+	@extend %text-center;
 }
