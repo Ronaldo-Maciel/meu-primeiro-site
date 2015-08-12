@@ -4,16 +4,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- metatags -->
+	<meta property="og:site_name" content="ronaldomaciel.com.br"/>
+	<meta property="og:title" content="Ronaldo Maciel - Web Front-End"/>
+	<meta property="og:description" content="Ronaldo Maciel é um freelancer na área de Front-End e Design de páginas web."/>
+	<meta property="og:url" content="http://www.ronaldomaciel.com.br"/>
+	<meta itemprop="name" content="Freelancer - HTML, CSS e Javascript - Front-End">
+	<meta name="description" content="Criação de códigos para front-end e design de páginas. Freelancer, PJ ou CLT. HTML, CSS e Javascript">
+
 
 	<title>Ronaldo Maciel - Front-End | Web Designer</title>
 	
 	<link rel="stylesheet" href="estilos/reset.css">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,900">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="estilos/style.css">
+	
 </head>
 <body>
-	<header class="container">
-
+	<header>
+	<div class="container">
 		<h1>
 			<span id="logo">
 				<a href="index.html"><img src="imagens/logo.svg"  alt="Ronaldo Maciel - Front-End"> </a>
@@ -21,6 +31,8 @@
 
 			<span class="slogan">web front-end</span>
 		</h1>
+	</div>
+
 		<div class="icone-menu"> <span>menu</span> </div>
 		<nav class="menu">
 			<ul>
@@ -31,16 +43,19 @@
 				<li>Contato</li>
 			</ul> 
 		</nav>
+	
 	</header>
 	<section class="principal">
 		<h2>
 			<span>“Códigos que se transformam em arte, me fascinam”</span>
 			<a class="btn btnP" href="#portfolio"> Veja meu portfolio </a>
 		</h2>
-
-		<div>
-			<i class="pc"></i>
+	<div class="container">
+		<div class="banner">
+			<span class="pc"></span>
+			<span class="caixinha"> </span><span class="mesa"> </span><span class="cavaquinho"></span>
 		</div>
+	</div>
 	</section>
 	
 	<article class="intro">
@@ -48,44 +63,71 @@
 	</article>
 	<section id="portfolio">
 		
-		
-		<h2 class="titulo"><strong>Projetos</strong>
-			
-		</h2>
-		
+			<h2 class="titulo"><strong>Projetos</strong>
 
-		<div class="bloco">
-			<figure>
-				<img src="imagens/infojobs-educacao.png" alt="Landing Page IJE">
-				<figcaption> <h3><strong>Landing Page Infojobs Educação</strong>
-					<span> Divulgação do portal de cursos do Infojobs. Responsável pelo Front-End e Design da página.</span></h3>
-					<a class="btn btnPort" href="#portfolio"> <span>Ver Projeto</span></a>
-					
-				</figcaption>
+			</h2>
 
-				
-			</figure>
-		</div>
-		<hr class="linha">
-		<div class="bloco">
-			<figure>
-				<img src="imagens/guezzit.png" alt="Site Guezzit">
-				<figcaption> <h3><strong>Web Site Guezz it</strong>
-					<span> Site da agência multimídia Guezz it. Criei a programação Front-End e . </span></h3>
-					<a class="btn btnPort" href="#portfolio"> <span>Ver Projeto</span></a>
-					
-				</figcaption>
-				
-			</figure>
+		<div class="wrap-projetos">
+			<div class="bloco">
+				<figure>
+					<img src="imagens/infojobs-educacao.png" alt="Landing Page IJE">
+					<figcaption> <h3><strong>Landing Page Infojobs</strong>
+						<span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque quos unde laudantium .</span></h3>
+						<a class="btn btnPort" href="#portfolio"> <span>Ver Projeto</span></a>
+
+					</figcaption>
+
+
+				</figure>
+			</div>
+			<hr class="linha">
+			<div class="bloco">
+				<figure>
+					<img src="imagens/guezzit.png" alt="Site Guezzit">
+					<figcaption> <h3><strong>Web Site Guezz it</strong>
+						<span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque quos unde laudantium . </span></h3>
+						<a class="btn btnPort" href="#portfolio"> <span>Ver Projeto</span></a>
+
+					</figcaption>
+
+				</figure>
+			</div>
+			<hr class="linha">
+			<div class="bloco">
+				<figure>
+					<img src="imagens/stilo-afrodite.png" alt="Stilo Afrodite">
+					<figcaption> <h3><strong> Stilo Afrodite </strong>
+						<span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque quos unde laudantium .</span></h3>
+						<a class="btn btnPort" href="#portfolio"> <span>Ver Projeto</span></a>
+
+					</figcaption>
+
+				</figure>
+			</div>
+			<hr class="linha">
+			<div class="bloco">
+				<figure>
+					<img src="imagens/infojobs-educacao.png" alt="Landing Page IJE">
+					<figcaption> <h3><strong>Ronaldo Maciel</strong>
+						<span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque quos unde laudantium .</span></h3>
+						<a class="btn btnPort" href="#portfolio"> <span>Ver Projeto</span></a>
+
+					</figcaption>
+
+
+				</figure>
+			</div>
 		</div>
 	</section>
 	<section id="servico">
+		<div class="container">
 		<div class="wrap-figure">
 			<span class="gear"> </span>
 		</div>
 
 		<h2 class="titulo"><strong>Serviços</strong>
 		</h2>
+		<div class="wrap-servicos">
 		<ul>
 			<li> 
 				<i class="web-site"></i>
@@ -109,195 +151,211 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nisi. </p>
 			</li>
 		</ul>
+		</div>
+		</div>
 	</section>
 	<article id="sobre">
+	<div class="container">
 		<section class="historia">
-		<div class="wrap-figure">
-			<i class="ronaldo-figura"><span class="icon-figura"></span></i>
-		</div>
+			<div class="wrap-figure">
+				<i class="ronaldo-figura"><span class="icon-figura"></span></i>
+			</div>
 
 		<h2 class="titulo"> <strong> Ronaldo Maciel</strong></h2>
-		<h3 class="titulo"> Quem sou eu? </h3>
-		<p>...Quando criança, sonhei em ser um jogador de futebol, mas faltava-me habilidade nos pés.</p>
-		<p>Então resolvi me aventurar radicalmente como skatista, e a frustração foi ainda pior.</p>
-		<p>Ao completar 14 anos de idade, me interessei por um curso profissionalizante de Web Design, no qual o rumo da minha vida começou a mudar...</p>
-		<p style="position:relative;"><span class="continue"><span class="btn-ler-mais"><strong>continue</strong></span> </span> Apaixonado por tecnologia e design, sou graduado em Produção Multimídia pela Universidade Metodista de São Paulo e Técnico em Informática para Internet (ETEC).</p>
-		<span class="continue-texto">
-			<p>..Design, criação de sites? Porque você não faz Engenharia, Medicina ou Advocacia?</p>
-			<p>Sim, já me perguntaram isso diversas vezes. Mas criar e programar para o espaço global me fascinam .</p>
-			<p>Inspiro isso constantemente; pois como Web Designer e um aspirante em Front-End procuro estar sempre atualizado em relação as novas tecnologias (HTML5, CSS3 e JavaScript) focando na usabilidade dos usuários.</p>
-			<p>Você pode encontrar o meu perfil no <strong>Linkedin</strong> e <strong>Github</strong>.</p> </span>
+		<div class="wrap-texto-sobre">
+			<h3 class="titulo" style="text-align:left;"> Quem sou eu? </h3>
+			<div class="texto-inicial">
+			<p>...Quando criança, sonhei em ser um jogador de futebol, mas faltava-me habilidade nos pés.</p>
+			<p>Então resolvi me aventurar radicalmente como skatista, e a frustração foi ainda pior.</p>
+			<p>Ao completar 14 anos de idade, me interessei por um curso profissionalizante de Web Design, no qual o rumo da minha vida começou a mudar...</p>
+			
+			<p class="texto-degrade"><span class="continue"><span class="btn-ler-mais"><strong>continue</strong></span> </span> Apaixonado por tecnologia e design, sou graduado em Produção Multimídia pela Universidade Metodista de São Paulo e Técnico em Informática para Internet (ETEC).</p>
+			</div>
+			<span class="continue-texto">
+				<p>..Design, criação de sites? Porque você não faz Engenharia, Medicina ou Advocacia?</p>
+				<p>Sim, já me perguntaram isso diversas vezes. Mas criar e programar para o espaço global me fascinam .</p>
+				<p>Inspiro isso constantemente; pois como Web Designer e um aspirante em Front-End procuro estar sempre atualizado em relação as novas tecnologias (HTML5, CSS3 e JavaScript) focando na usabilidade dos usuários.</p>
+				<p>Você pode encontrar o meu perfil no <strong>Linkedin</strong> e <strong>Github</strong>.</p> </span>
+			</div>
 		</section>
-		<section class="wrap-habilidades">
-		<h3 class="titulo"> Habilidades </h3>
-			<div class="habilidades">
-	<div class="flipper">
-	<div class="front"><img src="imagens/icon-html.svg" alt="HTML - HTMl5"> 
 	</div>
-	<div class="back"> 
-	<ul class="wrap-exp">
-	<li class="icon-exp"><div class="icon-html5"><span class="triangulo"> </span></div></li>
-	<li class="nivel">
-	<em>Html5 </em>
-	<span class="expandir html5"><span> 85%</span></span> </li>
-	</ul>
-	<hr class="linha">
-	<ul class="wrap-exp">
-	<li class="icon-exp"><div class="icon-seo"><span class="triangulo"></span></div></li>
-	<li class="nivel">
-	<em>seo</em>
-	<span class="expandir seo"><span> 70%</span></span> </li>
-	</ul>
-	<hr class="linha">
-	</div>
-	</div>
-	</div>
-	<div class="habilidades">
-	<div class="flipper">
-	<div class="front"><img src="imagens/icon-css.svg" alt="HTML - HTMl5"> 
-	</div>
-	<div class="back"> 
-	<ul class="wrap-exp">
-	<li class="icon-exp"><div class="icon-css3"><span class="triangulo"> </span></div></li>
-	<li class="nivel">
-	<em>css3 </em>
-	<span class="expandir css3"><span> 85%</span></span> </li>
-	</ul>
-	<hr class="linha">
-	<ul class="wrap-exp">
-	<li class="icon-exp"><div class="icon-bootstrap"><span class="triangulo"></span></div></li>
-	<li class="nivel">
-		<em>bootstrap</em>
-		<span class="expandir bootstrap"><span> 90%</span></span> </li>
-	</ul>
-	<hr class="linha">
-	<ul class="wrap-exp">
-		<li class="icon-exp"><div class="icon-sass"><span class="triangulo"></span></div></li>
-		<li class="nivel">
-			<em>sass</em>
-			<span class="expandir sass"><span> 65%</span></span> </li>
-		</ul>
-	</div>
-	</div>
-	</div>
-	<div class="habilidades">
-	<div class="flipper">
-	<div class="front"><img src="imagens/icon-js.svg" alt="HTML - HTMl5"> 
-	</div>
-	<div class="back"> 
-		<ul class="wrap-exp">
-			<li class="icon-exp"><div class="icon-js"><span class="triangulo"> </span></div></li>
-			<li class="nivel">
-				<em>javascript </em>
-				<span class="expandir js"><span> 60%</span></span> </li>
-			</ul>
-			<hr class="linha">
-			<ul class="wrap-exp">
-				<li class="icon-exp"><div class="icon-jquery"><span class="triangulo"></span></div></li>
-				<li class="nivel">
-					<em>Jquery</em>
-					<span class="expandir jquery"><span> 70%</span></span> </li>
-				</ul>
-				<hr class="linha">
-			</div>
-		</div>
-	</div>
-	<div class="habilidades">
-		<div class="flipper">
-			<div class="front"><img src="imagens/icon-design.svg" alt="HTML - HTMl5"> 
-			</div>
-			<div class="back"> 
-				<ul class="wrap-exp">
-					<li class="icon-exp"><div class="icon-ps"><span class="triangulo"> </span></div></li>
-					<li class="nivel">
-						<em>photoshop</em>
-						<span class="expandir ps"><span> 80%</span></span> </li>
-					</ul>
-					<hr class="linha">
+			<section class="wrap-habilidades">
+				<h3 class="titulo"> Habilidades </h3>
+				<div class="habilidades">
+					<div class="flipper">
+						<div class="front"><img src="imagens/icon-html.svg" alt="HTML - HTMl5"> 
+						</div>
+						<div class="back"> 
+							<ul class="wrap-exp">
+								<li class="icon-exp"><div class="icon-html5"><span class="triangulo"> </span></div></li>
+								<li class="nivel">
+									<em>Html5 </em>
+									<span class="expandir html5"><span> 85%</span></span> </li>
+								</ul>
+								<hr class="linha">
+								<ul class="wrap-exp">
+									<li class="icon-exp"><div class="icon-seo"><span class="triangulo"></span></div></li>
+									<li class="nivel">
+										<em>seo</em>
+										<span class="expandir seo"><span> 70%</span></span> </li>
+									</ul>
+									<hr class="linha">
+								</div>
+							</div>
+						</div>
+		<div class="habilidades">
+			<div class="flipper">
+				<div class="front"><img src="imagens/icon-css.svg" alt="HTML - HTMl5"> 
+				</div>
+				<div class="back"> 
 					<ul class="wrap-exp">
-						<li class="icon-exp"><div class="icon-ai"><span class="triangulo"></span></div></li>
+						<li class="icon-exp"><div class="icon-css3"><span class="triangulo"> </span></div></li>
 						<li class="nivel">
-							<em>Illustrator</em>
-							<span class="expandir ai"><span> 85%</span></span> </li>
+							<em>css3 </em>
+							<span class="expandir css3"><span> 85%</span></span> </li>
 						</ul>
 						<hr class="linha">
 						<ul class="wrap-exp">
-							<li class="icon-exp"><div class="icon-ux"><span class="triangulo"></span></div></li>
+							<li class="icon-exp"><div class="icon-bootstrap"><span class="triangulo"></span></div></li>
 							<li class="nivel">
-								<em>ux/ui</em>
-								<span class="expandir ux"><span> 65%</span></span> </li>
+								<em>bootstrap</em>
+								<span class="expandir bootstrap"><span> 90%</span></span> </li>
 							</ul>
+							<hr class="linha">
+							<ul class="wrap-exp">
+								<li class="icon-exp"><div class="icon-sass"><span class="triangulo"></span></div></li>
+								<li class="nivel">
+									<em>sass</em>
+									<span class="expandir sass"><span> 65%</span></span> </li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-		 <section class="workflow">
-		 	<h3 class="titulo">workflow</h3>
-		 		<ul>
-		 			<li>Sublime Text</li>
-		 			<li>Command Line</li>
-		 			<li>Git</li>
-		 			<li>Bower</li>
-		 			<li>Grunt</li>
-		 			<li>Yeoman</li>
-		 			<li>Windows</li>
-		 			<li>photoshop</li>
-		 			<li>illustrator</li>
-		 		</ul>
-		 </section>
-		 <section class="conquistas">
-		 	<h3 class="titulo"> Conquistas </h3>
-		 	<hr class="linha">
-		 	<ul>
-		 		<li class="wrap-beca"><span class="beca"></span></li>
-		 		<li class="icon-certificado"> </span><span style="top:16px;">UMESP</span></li><li><h4> tecnologia em produção multimídia</h4> <p>Universidade Metodista de São Paulo - 2012/2014 </p></li>
-
-		 	</ul>
-		 	<hr class="linha">
-		 	<ul>
-		 		<li class="icon-certificado"><span>Caelum</span></li><li><h4> Front-End com HTML, CSS e JavaScript</h4> <p>Caelum Ensino e Inovação - 2015 </p></li>
-		 	</ul>
-		 	<hr class="linha">
-		 	<ul>
-		 		<li class="icon-certificado"><span>Caelum</span></li><li><h4>Linguagem Javascript </h4> <p> Caelum Online - Alura 2015 </p></li>
-		 	</ul>
-		 	<hr class="linha">
-		 	<ul>
-		 		<li class="icon-certificado"><span style="left:33px;">ETEC</span></li><li><h4>técnico informática para internet </h4> <p>Centro Paula Souza - 2010/2011 </p></li>
-		 	</ul>
-		 	<hr class="linha">
-		 	<ul>
-		 		<li class="icon-certificado"><span style="left:23px;">Imasters</span></li><li><h4> Web design responsivo</h4> <p> Imasters Cursos Online - 2014</p></li>
-		 	</ul>
-		 	<hr class="linha">
-		 	<a class="btn btnP" href="#" style="margin:30px auto;"> ver currículo </a>
-		 </section>
-		</article>
-		<footer id="contato">
-			<h3 class="titulo"><strong>contato</strong>	</h3>
-			<div class="wrap-contato">
-				<ul>
-					<li class="icon-contato phone"></li>
-					<li class="info-contato"><p><strong>telefone</strong></p><p>(11*) 95225.9059</p></li>
-				</ul>
-				<ul>
-					<li class="icon-contato email"></li>
-					<li class="info-contato"><p><strong>e-mail</strong></p><p>ronaldo.maciel@outlook.com</p></li>
-				</ul>	
-				<ul>
-					<li class="icon-contato skype"></li>
-					<li class="info-contato"><p><strong>skype</strong></p><p>ronaldo.maciel</p></li>
-				</ul>		
-			</div>
-			<ul class="social">
-				<a href="#" title="GitHub"><li class="github"><span>GitHub</span></li></a>
-				<a href="#" title="Linkedin"><li class="linkedin"><span>Linkedin</span></li></a>
+<div class="habilidades">
+<div class="flipper">
+<div class="front"><img src="imagens/icon-js.svg" alt="HTML - HTMl5"> 
+</div>
+<div class="back"> 
+	<ul class="wrap-exp">
+		<li class="icon-exp"><div class="icon-js"><span class="triangulo"> </span></div></li>
+		<li class="nivel">
+			<em>javascript </em>
+			<span class="expandir js"><span> 60%</span></span> </li>
+		</ul>
+		<hr class="linha">
+		<ul class="wrap-exp">
+			<li class="icon-exp"><div class="icon-jquery"><span class="triangulo"></span></div></li>
+			<li class="nivel">
+				<em>Jquery</em>
+				<span class="expandir jquery"><span> 70%</span></span> </li>
 			</ul>
-			<a class="voltar-topo" title="Voltar ao Topo"></a>
 			<hr class="linha">
-			<p class="copyright">© 2015 Ronaldo Maciel. Todos os direitos reservados.</p>
-		</footer>	
-																					
+		</div>
+	</div>
+</div>
+<div class="habilidades">
+	<div class="flipper">
+		<div class="front"><img src="imagens/icon-design.svg" alt="HTML - HTMl5"> 
+		</div>
+		<div class="back"> 
+			<ul class="wrap-exp">
+				<li class="icon-exp"><div class="icon-ps"><span class="triangulo"> </span></div></li>
+				<li class="nivel">
+					<em>photoshop</em>
+					<span class="expandir ps"><span> 80%</span></span> </li>
+				</ul>
+				<hr class="linha">
+				<ul class="wrap-exp">
+					<li class="icon-exp"><div class="icon-ai"><span class="triangulo"></span></div></li>
+					<li class="nivel">
+						<em>Illustrator</em>
+						<span class="expandir ai"><span> 85%</span></span> </li>
+					</ul>
+					<hr class="linha">
+					<ul class="wrap-exp">
+						<li class="icon-exp"><div class="icon-ux"><span class="triangulo"></span></div></li>
+						<li class="nivel">
+							<em>ux/ui</em>
+							<span class="expandir ux"><span> 65%</span></span> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="workflow">
+			<h3 class="titulo">workflow</h3>
+			<ul>
+				<li>Sublime Text</li>
+				<li>Command Line</li>
+				<li>Git</li>
+				<li>Bower</li>
+				<li>Grunt</li>
+				<li>Yeoman</li>
+				<li>Windows</li>
+				<li>photoshop</li>
+				<li>illustrator</li>
+			</ul>
+		</section>
+		<section class="container conquistas">
+			<h3 class="titulo"> Conquistas </h3>
+			<hr class="linha">
+			<ul>
+				<li class="wrap-beca"> <span class="beca"></span></li>
+				<li class="icon-certificado"><span class="escola" style="top:15px;">UMESP</span></li><li><h4> tecnologia em produção multimídia</h4> <p>Universidade Metodista de São Paulo - 2012/2014 </p></li>
+
+			</ul>
+			<hr class="linha">
+			<ul>
+				<li class="icon-certificado"><span class="escola">Caelum</span></li><li><h4> Front-End com HTML, CSS e JavaScript</h4> <p>Caelum Ensino e Inovação - 2015 </p></li>
+			</ul>
+			<hr class="linha">
+			<ul>
+				<li class="icon-certificado"><span class="escola">Caelum</span></li><li><h4>Linguagem Javascript na prática</h4> <p> Caelum Online - Alura 2015 </p></li>
+			</ul>
+			<hr class="linha">
+			<ul>
+				<li class="icon-certificado"><span class="escola" style="left:33px;">ETEC</span></li><li><h4>técnico informática para internet </h4> <p>Centro Paula Souza - 2010/2011 </p></li>
+			</ul>
+			<hr class="linha">
+			<ul>
+				<li class="icon-certificado"><span class="escola" style="left:23px;">Imasters</span></li><li><h4> Web design responsivo</h4> <p> Imasters Cursos Online - 2014</p></li>
+			</ul>
+			<hr class="linha">
+			<ul>
+				<li class="icon-certificado"><span class="escola">Alpha C.</span></li><li><h4> Photoshop e Illustrator</h4> <p> Alpha Channel Computação Gráfica - 2014</p></li>
+			</ul>
+			<hr class="linha">
+		</section>
+			<div class="container">
+			<a class="btn btnP" href="#" style="margin:60px auto;"> ver currículo </a>
+			</div>
+	
+	</article>
+	<footer id="contato">
+		<h3 class="titulo"><strong>contato</strong>	</h3>
+		<div class="wrap-contato">
+			<ul>
+				<li class="icon-contato phone"></li>
+				<li class="info-contato"><p><strong>telefone</strong></p><p>(11*) 95225.9059</p></li>
+			</ul>
+			<ul>
+				<li class="icon-contato email"></li>
+				<li class="info-contato"><p><strong>e-mail</strong></p><p>ronaldo.maciel@outlook.com</p></li>
+			</ul>	
+			<ul>
+				<li class="icon-contato skype"></li>
+				<li class="info-contato"><p><strong>skype</strong></p><p>ronaldo.maciel</p></li>
+			</ul>		
+		</div>
+		<ul class="social">
+			<a href="#" title="GitHub"><li class="github"><span>GitHub</span></li></a>
+			<a href="#" title="Linkedin"><li class="linkedin"><span>Linkedin</span></li></a>
+		</ul>
+		<a class="voltar-topo" title="Voltar ao Topo"></a>
+		<hr class="linha">
+		<p class="copyright">© 2015 Ronaldo Maciel. Todos os direitos reservados.</p>
+	</footer>	
+
 	<script src="js/jquery.min.js"> </script>
 	<script src="js/script.js"> </script>
 

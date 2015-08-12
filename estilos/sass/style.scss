@@ -7,12 +7,23 @@ $color-padrao: #fff;
 $fundo-padrao: #5ACBE3;
 $color-verde: #4BBDB8;
 $color-black:#81878C;
-$container: 100%;
-$fonte-padrao:'Lato';
+$fonte-padrao:'Roboto';
 
 %responsive{
 	max-width:100%;
 	height: auto;
+}
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+    	content:'';
+        clear: both;
+    }
 }
 %text-center {
 	text-align: center;
@@ -44,6 +55,8 @@ $fonte-padrao:'Lato';
 %padding-lados{
 	padding:0 10px;
 }
+
+
 @mixin size($width, $height: $width) {
     width: $width;
     height: $height;
@@ -63,7 +76,9 @@ strong{
 i{
 	@extend %block;
 }
-
+header{
+	width:100%;
+}
 .fixed {
 	position: fixed !important;
 	background-color: $color-verde;
@@ -82,8 +97,10 @@ body {
 .container {
 	
 	@extend %center;
-	width:$container;
+	width:96%;
 	@extend %relative;
+	@extend %clearfix;
+	
 }
 #logo.logo-mobile a{
 	@extend %block;
@@ -151,14 +168,30 @@ body {
 	z-index:9999;
 }
 
-.principal h2 span{
+.principal h2{
 	@extend %center;
-	font-weight: 300;
+	max-width:480px;
+	@media (min-width: 1200px) {
+  		max-width:630px;
+	}
+}
+.principal h2 span{
+	font-weight: 100;
 	font-size: 1.4em;
 	@extend %text-center;
 	@extend %block;
 	@extend %margin-padrao;
 	margin-bottom:15px;
+		@media (min-width: 400px) {
+  		font-size:1.8em;
+	}
+		@media (min-width: 600px) {
+  		font-size:2.0em;
+	}
+		@media (min-width: 1200px) {
+  		font-size:2.8em;
+	}
+
 }
 .btn {
 	@extend %block;
@@ -171,12 +204,19 @@ body {
 	color:$color-padrao;
 	text-transform: uppercase;
 	@extend %relative;
+	@media (min-width: 1200px) {
+  		width:240px;
+  		padding: 15px;
+	}
 }
 .btnP{
 	background-color: transparent;
 	font-size: 0.8em;
 	 border: solid #fff 1px;
  transition: all 0.3s ease 0s;
+ 	@media (min-width: 1200px) {
+  		font-size: 1.0em;
+	}
 
 }
 .btnP:hover{
@@ -185,25 +225,97 @@ body {
 	color:#fff;
 
 }
-
-.pc {
-	background-image: url(../imagens/notebook_banner.svg);
-	background-size: cover;
-	width: 200px; 
-	height: 150px;
-	@extend %relative;
-	bottom: -30px;
-	z-index: 10;
+.banner{
+	position:relative;
+	padding-top:50px;
 	@extend %center;
+	@media (min-width: 768px) {
+		max-width:840px;
+		height:350px;
+	}
+}
+.banner span{
+	@extend %block;
+	@media (min-width: 768px) {
+ 
+	}
+}
+.caixinha, .mesa, .cavaquinho{
+	display:none;
+	position:absolute;
+	bottom: -14px;
+}
+.pc {
+	background-image:url(../imagens/notebook_banner.svg);
+	@extend %relative;
+	@extend %center;
+	background-size:cover;
+	width:200px;
+	height:115px;
+	bottom: -14px;
+	z-index: 10;
+	@media (min-width: 768px) {
+			position:absolute;
+			width:320px;
+			height:180px;
+			left:80px;
+		}
+}
+
+@media (min-width: 768px) {	
+	.caixinha, .caixinha::after{
+	background: url('../imagens/icons-banner.png') no-repeat -161px -250px;
+	width: 76px;
+	height: 107px;
+	position:absolute;
+	
+	}
+	.caixinha{
+		left:0;
+	}
+	.caixinha::after{
+		left:410px;
+		bottom: 0px;
+		content:'';
+		display:none;
+		@media (min-width: 868px) {
+			display:block;
+		}
+	}
+	.mesa{
+	background: url('../imagens/icons-banner.png') no-repeat -263px -144px;
+	width: 337px;
+	height: 212px;
+	right:0px;
+	bottom:0px;
+	}
+	.cavaquinho{
+	background: url('../imagens/icons-banner.png') no-repeat 0 0;
+	width: 135px;
+	height: 357px;
+	right:0px;
+	z-index:30;
+	}
 }
 .frase{
 	padding: 40px 10px;
 	text-align: center;
 	font-size: 1.0em;
 	line-height: 1.4em;
-	font-weight: 300;
+	font-weight: 100;
 	@extend %center;
 	max-width: 320px;
+	@media (min-width: 768px) {
+  		font-size:1.3em;
+  		min-width: 400px;
+  		line-height: 1.2em;
+  		padding: 90px 10px;
+	}
+	@media (min-width: 1200px) {
+  		font-size:1.8em;
+  		line-height: 1.4em;
+  		min-width:550px;
+	}
 }
 
 .intro {
@@ -220,6 +332,9 @@ body {
 	padding:30px 10px;
 	@extend %relative;
 	z-index:2;
+	@media screen and(min-width: 1200px){
+		padding:45px 10px;
+	}
 }
 .titulo::after{
 	@extend %block;
@@ -263,38 +378,76 @@ body {
 	background-color:transparent;
 	margin-bottom:20px;
 }
-.bloco figure{
+@media screen and(min-width: 1024px){
+	.bloco{
+		width:50%;
+		display:inline-block;
+		margin-right:-4px;
+		vertical-align:top;
+	}
+	#portfolio .linha{
+		display:none;
+	}
+}
+@media screen and(min-width: 1600px){
+	.wrap-projetos{
+		width:80%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+}
+figure{
 	padding:30px 0px;
 }
-.bloco figure img{
-	width:300px;
+figure img{
+	
 	max-width:300px;
 	@extend %center;
 	@extend %block;
+	@media (min-width: 600px) {
+  		max-width:380px;
+	}
+	@media (min-width: 1200px) {
+  		min-width:420px;
+	}
+	@media (min-width: 1600px) {
+  		min-width:500px;
+	}
 	
 }
-.bloco figcaption{
+figcaption{
 	padding:20px 5px;
 	@extend %text-center;
+	@extend %center;
+	@media (min-width: 600px) {
+  		
+  		max-width:500px;
+	}
 }
-.bloco figcaption h3 {
+figcaption h3 {
 	color:$color-verde;
 	text-transform:uppercase;
 	font-size:1.6em;
+	@media (min-width: 600px) {
+  		font-size:2em;
+  		padding-top:20px;
+	}
+	
 }
-.bloco h3 span::before, #servico h3::after, .conquistas ul h4::after{
+
+figure h3 span::before, #servico h3::after, .conquistas ul h4::after{
 	content:'- - - -';
 	@extend %block;
 	color:#1b2631;
 	font-size:2em;
 	font-weight:900;
 }
-.bloco h3 span {
+figure h3 span {
 	color: #fff;
 	@extend %block;
 	font-size:0.7em;
 	text-transform:none;
-	
+	font-weight:300;
 }
 .btnPort {
 	margin-top:20px;
@@ -311,6 +464,9 @@ body {
 	@extend %relative;
 	top:5px;
 	z-index:10;
+	@media screen and(min-width: 1200px){
+		font-size:1.2em;
+	}
 }
 .btnPort::after{
 	background-color:$color-verde;
@@ -394,8 +550,9 @@ body {
 	color:#2c3e50;
 }
 #servico  li{
-	
+	max-width:300px;
 	@extend %text-center;
+	@extend %center;
 }
 #servico  i{
 	@include size(176px);
@@ -410,9 +567,30 @@ body {
 .landing{
 	background: url('../imagens/icons-servico.svg') no-repeat -359px -5px;
 }
+@media screen and(min-width: 1200px){
+	.wrap-servicos{
+		width:85%;
+		margin-right:auto;
+		margin-left:auto;
+	}
+	
+}
+@media screen and(min-width: 1600px){
+		.wrap-servicos{
+		width:65%;
+	}
+}
 #servico ul{
 	padding-top:25px;
 	padding-bottom:40px;
+	@media screen and(min-width:768px){
+		display:inline-block;
+		margin-right:-4px;
+		vertical-align:top;
+		width:33.33%;
+		padding-top:50px;
+		padding-bottom:100px;
+	}
 }
 #servico li h3{
 	
@@ -424,6 +602,9 @@ body {
 #servico .linha{
 	
 	border-color: #DFE4E5;
+	@media screen and(min-width:768px){
+		display:none;
+	}
 }
 #sobre {
 	background-color:$color-verde;
@@ -467,6 +648,35 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 #sobre .titulo::after{
 	border-top:12px solid #4BADA6;
 }
+	
+@media screen and(min-width: 1024px) {
+	.texto-inicial{
+  		display:block;
+  		width:45%;
+  		word-wrap: break-word;
+  		float:left;
+		}
+}
+.continue-texto{
+	display:none;
+	@extend %clearfix;
+	@media screen and(min-width: 1024px) {
+  		display:block;
+  		float:right;
+  		width:45%;
+  		word-wrap: break-word;
+		}	
+}
+@media screen and(min-width: 1024px) {
+  		.wrap-texto-sobre{
+  			width:80%;
+  			margin-right:auto;
+  			margin-left:auto;
+  		}
+	}
+.texto-degrade{
+	position:relative;
+}
 .historia p{
 	text-align:justify;
 	line-height:1.5em;
@@ -482,6 +692,9 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 	width:100%;
     height: 120px; 
     background: linear-gradient(to bottom, rgba(75,189,184,0.4),rgba(75,189,184,0.8),rgba(75,189,184,0.9), rgba(75,189,184,1)); /* Standard syntax (must be last) */
+    @media screen and(min-width: 1024px) {
+  		display:none;
+		}
 }
 
 .btn-ler-mais{
@@ -497,10 +710,12 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 	background-color:rgba(55, 150, 146, 0.7);
 	border-radius:4px;
 	text-transform:uppercase;
+	@media screen and(min-width: 1024px) {
+  		display:none;
+		}
 }
-.continue-texto{
-	display:none;
-}
+
+
 #sobre .linha{
 	border-color: #D3EBEB;
 }
@@ -515,11 +730,26 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .wrap-habilidades{
 	margin-top:30px;
+	@extend %clearfix;
+	@media screen and(min-width: 1024px) {
+  		width:70%;
+		margin-right:auto;
+		margin-left:auto;
+		margin-top:80px;
+		}	
 }
 .habilidades{
 	-webkit-perspective: 1000px;
 	        perspective: 1000px;
 	border-top: #D3EBEB dotted 1px;
+	width:100%;
+	height: 310px;
+	@media screen and(min-width: 768px) {
+  			float:left;
+  			width: 50%;
+  			border-top: none;
+
+			}	
 }
 
 .habilidades:hover .back, .habilidades.hover .back {
@@ -534,7 +764,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 		
 		/* END: Comandos para  IE */
 
-		.habilidades, .front, .back {
+		 .front, .back {
 			width: 100%;
 			height: 310px;
 			
@@ -1000,15 +1230,17 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 
 .workflow{
 	padding:30px 0px;
+
 }
 .workflow ul{
 		@extend %padding-lados;
 		@extend %center;
-		max-width:310px;
+		max-width:305px;
+		text-align:center;
 	li{
 		@extend %inline-block;
 		background-color:#D3EBEB;
-		padding:5px 10px;
+		padding:3px 6px;
 		color:#777;
 		margin-right: 2px;
     	margin-bottom: 5px;
@@ -1021,7 +1253,6 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .wrap-beca{
 	width:122px;
-	height:28px;
 	@extend %center;
 	@extend %relative;
 }
@@ -1031,7 +1262,8 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 	height:75px;
 	@extend %block;
 	@extend %absolute;
-	top:0px;
+	top: -30px;
+	z-index: 9;
 	-webkit-transform: rotate(6deg);
 	-moz-transform: rotate(6deg);
 	-ms-transform: rotate(6deg);
@@ -1042,13 +1274,26 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 	width:280px;
 	@extend %center;
 
+	@media (min-width: 400px) {
+  		width:380px;
+	}
+	@media (min-width: 600px) {
+  		width:50%;
+  		display:inline-block;
+  		margin-right:-4px;
+  		vertical-align:top;
+	}
+	@media (min-width: 1024px) {
+  		width:33.33%;
+	}
+
 		.icon-certificado{
 		background-image:url(../imagens/certificado.svg);
 		width:86px;
 		height:118px;
 		@extend %center;
 		
-			span{
+			.escola{
 				@extend %relative;
 				left:25px;
 				top:7px;
@@ -1058,6 +1303,7 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 			}
 		}
 		li {
+			@extend %relative;
 			
 		h4 {
 			color:#FCFCFC;
@@ -1069,6 +1315,9 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 		h4, p{
 			color:#FCFCFC;
 			@extend %text-center;
+			@extend %center;
+			max-width:280px;
+			word-wrap: break-word;
 		}
 		p{
 			font-size:18px;
@@ -1082,29 +1331,40 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 }
 .conquistas .linha{
 	width:280px;
+	@media (min-width: 600px) {
+  		display:none;
+	}
 }
-.conquistas .btnP:hover{
+#sobre .btnP:hover{
 	background-color:#4EB7AF;
 } 
 #contato{
 	background-color:#01212A;
-}
-#contato .titulo{
-	color:#fff;
-	background-color:#0D4F63;
+	padding-top:20px;
 }
 #contato .titulo::after{
 	border-top-color:#0D4654;
 }
 .wrap-contato{
 	width:80%;
-	border:dashed #0D4F63 2px;
-	margin-top:30px;
+	border:dashed #00B8ED 2px;
+	margin-top:40px;
 	margin-bottom:30px;
 	@extend %center;
+	@media (min-width: 600px) {
+  		width:96%;
+	}
+	@media (min-width: 1024px) {
+  		width:60%;
+	}
 }
 .wrap-contato ul{
 	margin:40px 0px;
+	@media (min-width: 600px) {
+  		display:inline-block;
+  		margin-right:-4px;
+  		width:33.33%;
+	}
 }
 .info-contato{
 	@extend %text-center;
@@ -1145,9 +1405,10 @@ background: url('../imagens/ronaldo-vetor.svg') no-repeat 0px 0;
 	@extend %inline-block;
 	margin-bottom: 80px;
 }
-.github, .linkedin{
+.github , .linkedin{
 	width: 56px;
 	height: 56px;
+	@extend %block;
 }
 .github{
 	background: url('../imagens/icons-contato.svg') no-repeat -30px -109px;
