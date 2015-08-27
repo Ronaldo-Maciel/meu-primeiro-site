@@ -2,20 +2,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+	<title>Ronaldo Maciel - Front-End | Web Designer</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- metatags -->
-	<meta property="og:site_name" content="ronaldomaciel.com.br"/>
-	<meta property="og:title" content="Ronaldo Maciel - Web Front-End"/>
-	<meta property="og:description" content="Ronaldo Maciel é um freelancer na área de Front-End e Design de páginas web."/>
-	<meta property="og:url" content="http://www.ronaldomaciel.com.br"/>
-	<meta itemprop="name" content="Freelancer - HTML, CSS e Javascript - Front-End">
-	<meta name="description" content="Criação de códigos para front-end e design de páginas. Freelancer, PJ ou CLT. HTML, CSS e Javascript">
-
-
-	<title>Ronaldo Maciel - Front-End | Web Designer</title>
-	
+	<meta name="description" content="Ronaldo Maciel é  Freelancer Front-End e Design de páginas web.">
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<link rel="stylesheet" href="estilos/reset.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="estilos/style.css">
@@ -23,39 +18,77 @@
 </head>
 <body>
 	<header>
-	<div class="container">
+		<div class="container" id="home">
 		<h1>
 			<span id="logo">
-				<a href="index.html"><img src="imagens/logo.svg"  alt="Ronaldo Maciel - Front-End"> </a>
+				<a href="index.html"><img src="imagens/logo.svg" width="123" height="57" alt="Ronaldo Maciel - Front-End"> </a>
 			</span>
 
 			<span class="slogan">web front-end</span>
 		</h1>
-	</div>
-
 		<div class="icone-menu"> <span>menu</span> </div>
 		<nav class="menu">
 			<ul>
-				<li>Home</li>
-				<li>Portfolio</li>
-				<li>Servicos</li>
-				<li>Sobre</li>
-				<li>Contato</li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#portfolio">Portfólio</a></li>
+				<li><a href="#servico">Serviços</a></li>
+				<li><a href="#sobre">Sobre</a></li>
+				<li><a href="#contato">Contato</a></li>
 			</ul> 
 		</nav>
-	
+	</div>
 	</header>
 	<section class="principal">
-		<h2>
-			<span>“Códigos que se transformam em arte, me fascinam”</span>
-			<a class="btn btnP" href="#portfolio"> Veja meu portfolio </a>
-		</h2>
-	<div class="container">
-		<div class="banner">
-			<span class="pc"></span>
-			<span class="caixinha"> </span><span class="mesa"> </span><span class="cavaquinho"></span>
+	<div class="banner-full">
+			<div class="container">
+			<div class="banner-mobile">
+			<h2>
+						<span class="title-banner">“Códigos que se transformam em arte, me fascinam”</span>
+						<a  href="#portfolio"><span class="btn btnP"> Veja meu portfolio </span></a>
+					</h2>
+						<span class="pc"></span>
+			</div>
+			<div class="banner">
+				<div class="slide">
+					<h2>
+						<span class="title-banner">“Códigos que se transformam em arte, me fascinam”</span>
+						 <a href="#portfolio"><span class="btn btnP">Veja meu portfolio </span></a>
+					</h2>
+						
+						<span class="pc"></span>
+						<span class="caixinha"> </span>
+						<span class="caixinha"> </span>
+					<span class="mesa"> </span>
+						<span class="cavaquinho"></span>
+				</div>
+				<div class="slide">
+					<h2>
+						<span class="title-banner">Criação de Design <strong>UX</strong> & <strong>UI</strong>
+						para web pages</span>
+						<a href="#portfolio"> <span class="btn btnP">Veja meu portfolio </span></a>
+					</h2>
+						<span class="pc-design"></span>
+						<span class="papel-design"> </span>
+					<span class="phone-design"> </span>
+
+				</div>
+
+				<div class="slide">
+					<h2 style="width:590px;margin-left:-290px;">
+						<span class="title-banner">Programação <strong>Front-End</strong> para web pages</span>
+						<a href="#portfolio"> <span class="btn btnP">Veja meu portfolio </span></a>
+					</h2>
+						<span class="pc-front"></span>
+						<span class="calculadora"> </span>
+					<span class="pendrive"> </span>
+				</div>
+				
+				</div>
+				<span class="prev">anterior</span><span class="next">próximo</span>
+			</div>
+			<span class="background-top"></span>
 		</div>
-	</div>
+		
 	</section>
 	
 	<article class="intro">
@@ -107,10 +140,10 @@
 			<hr class="linha">
 			<div class="bloco">
 				<figure>
-					<img src="imagens/infojobs-educacao.png" alt="Landing Page IJE">
+					<img src="imagens/ronaldo-maciel.png" alt="Projeto Ronaldo Maciel - Web Site">
 					<figcaption> <h3><strong>Ronaldo Maciel</strong>
 						<span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque quos unde laudantium .</span></h3>
-						<a class="btn btnPort" href="#portfolio"> <span>Ver Projeto</span></a>
+						<a class="btn btnPort" href="#portfolio"> <span>projeto no GitHub</span></a>
 
 					</figcaption>
 
@@ -163,7 +196,7 @@
 
 		<h2 class="titulo"> <strong> Ronaldo Maciel</strong></h2>
 		<div class="wrap-texto-sobre">
-			<h3 class="titulo" style="text-align:left;"> Quem sou eu? </h3>
+			<h3 class="titulo" style="text-align:left; margin-left:0px;"> Quem sou eu? </h3>
 			<div class="texto-inicial">
 			<p>...Quando criança, sonhei em ser um jogador de futebol, mas faltava-me habilidade nos pés.</p>
 			<p>Então resolvi me aventurar radicalmente como skatista, e a frustração foi ainda pior.</p>
@@ -347,6 +380,24 @@
 				<li class="info-contato"><p><strong>skype</strong></p><p>ronaldo.maciel</p></li>
 			</ul>		
 		</div>
+		<form method="POST">
+			<h3>Entre em Contato</h3>
+			<label for="nome">Nome:</label>
+			<input aria-label="Por favor, digite seu nome" id="nome" class="input-nome" name="contact-name" type="text" placeholder="nome" required="">
+		
+	
+			<label for="contact-mail">E-mail:</label>
+			<input aria-label="Por favor, digite seu e-mail" id="contact-mail" class="input-email" name="contact-mail" placeholder="e-mail" type="email" required="">
+		
+
+			<label for="mensagem" class="label-mensagem">Mensagem:</label>
+			<textarea id="mensagem" name="mensagem" class="input-mensagem" placeholder="mensagem"></textarea>
+	
+			<div class="botton-form">
+				<button class="btn btnPort" type="submit"><span>Enviar Mensagem</span></button>
+			</div>
+		</form>
+		<div class="final-footer">
 		<ul class="social">
 			<a href="#" title="GitHub"><li class="github"><span>GitHub</span></li></a>
 			<a href="#" title="Linkedin"><li class="linkedin"><span>Linkedin</span></li></a>
@@ -354,10 +405,10 @@
 		<a class="voltar-topo" title="Voltar ao Topo"></a>
 		<hr class="linha">
 		<p class="copyright">© 2015 Ronaldo Maciel. Todos os direitos reservados.</p>
+		</div>
 	</footer>	
-
-	<script src="js/jquery.min.js"> </script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js">  </script>
+	<script src="js/scrollTo.js"> </script>
 	<script src="js/script.js"> </script>
-
 </body>
 </html>

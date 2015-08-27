@@ -349,3 +349,7 @@ background-color: #6cceec;
     background-image: -webkit-linear-gradient(#6cceec 12%,#f37074);
     background-image: -webkit-linear-gradient(#6cceec 12%, #f37074);
     background-image: linear-gradient(#6cceec 12%,#f37074);
+
+
+BD97CC roxo
+191919 preto
