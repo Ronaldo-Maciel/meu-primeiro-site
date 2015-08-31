@@ -156,9 +156,12 @@ $(".voltar-topo").click(function(e){
         $( ".icon-figura" ).removeClass("hover"); 
     });
 
-
 // FIM Touch start //
-
+// imgs load
+$('#wrap-emkt img').fadeInScroll();
+$('#wrap-emkt img').fadeInScroll({
+minDistance:  70 * $(window).height() / 100
+});
 
 
 
