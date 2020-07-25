@@ -1,0 +1,95 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:800,400";
+@font-face{font-family:'Candara';src:url(../fonts/candara-webfont.eot);src:local(candara),url(../fonts/candara-webfont.ttf) format("truetype")}
+@font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"),url(../fonts/glyphicons-halflings-regular.woff) format("woff"),url(../fonts/glyphicons-halflings-regular.ttf) format("truetype"),url(../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular) format("svg")}
+body{font-family:'Candara',MyriadPro-Regular,Arial,Heveltica,sans-serif}
+.bottom-10{margin-bottom:10px}
+.bottom-40{margin-bottom:40px}
+.top-20{margin-top:20px}
+.bg{background-image:url(../img/background_topo.jpg);background-size:cover;background-repeat:no-repeat;background-position:right top;position:relative}
+.bg-carousel{bottom:0;height:100%;left:0;position:absolute;opacity:.9;width:100%;z-index:1;background-image:linear-gradient(to top,rgba(0,0,0,0.8) 0px,rgba(0,0,0,0.8) 35%,rgba(0,0,0,0.1) 75%,transparent 100%);background-image:-webikit-linear-gradient(to top,rgba(0,0,0,0.8) 0px,rgba(0,0,0,0.8) 35%,rgba(0,0,0,0.1) 75%,transparent 100%);background-image:-moz-linear-gradient(to top,rgba(0,0,0,0.8) 0px,rgba(0,0,0,0.8) 35%,rgba(0,0,0,0.1) 75%,transparent 100%)}
+.carousel-control{z-index:2}
+.carousel-caption{font-family:'Open Sans',sans-serif}
+.carousel-caption h1{font-size:44px;font-weight:800;text-transform:uppercase}
+.carousel-caption p{font-size:22px}
+.wrap-logo{width:100%;display:inline-block;height:100%}
+.logo{width:23%;height:23%;display:inline-block;z-index:20;margin-right:5%;margin-bottom:7%;float:right}
+.fixed{position:fixed!important;top:0!important;height:38px}
+.wrap-menu{width:100%;background:rgba(0,0,0,0.85);position:absolute;bottom:0;z-index:8888}
+.icone-menu{display:none}
+.menu{display:inline-block}
+.menu li{display:inline-block;position:relative;margin-right:-4px}
+.menu li span{display:inline-block;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #aaa;position:relative;left:10px}
+.menu li a,.menu .dropdown > a{text-decoration:none;color:#fff;padding:20px 40px;display:block;transition:all .25s linear}
+.menu li a:hover,.menu .dropdown:hover{background-color:#45b2cc}
+.dropdown > a{cursor:default}
+.sub-menu li a:hover{background-color:#fff}
+.sub-menu{display:none}
+.sub-menu.active{display:block;top:60px;left:0;border-bottom:solid #45b2cc 1px;border-left:solid #45b2cc 1px;border-right:solid #45b2cc 1px;width:100%;position:absolute;background-color:#fff}
+.sub-menu li{width:100%}
+.sub-menu li a{height:100%;color:#333;width:100%}
+.sub-menu li a:hover{text-decoration:underline}
+.linha{display:block;border:dashed #DADFE1;border-width:0;height:1px;border-top-width:1px;width:100%;margin:0;background-color:#fff}
+.social li:nth-child(1) a[href*="facebook.com"]{background-image:url(../img/facebook.png)}
+.social li:nth-child(1) a:hover{background-color:#415c92}
+.social li:nth-child(2) a[href*="twitter.com"]{background-image:url(../img/twitter.png)}
+.social li:nth-child(2) a:hover{background-color:#37aac5}
+.social li:nth-child(3) a[href*="plus.google.com"]{background-image:url(../img/google-plus.png)}
+.social li:nth-child(3) a:hover{background-color:#2a2926}
+.social li:nth-child(4) a[href*="dribbble.com"]{background-image:url(../img/dribbble.png)}
+.social li:nth-child(4) a:hover{background-color:#e36893}
+.social li a{width:38px;height:38px;border-radius:50%;color:transparent;text-indent:-9999px;display:inline-block;margin-right:-4px;margin-left:5px;position:relative;top:12px;overflow:hidden;vertical-align:middle;background-color:transparent;background-repeat:no-repeat;background-position:center}
+.social li{display:inline-block;margin-right:-4px}
+.social{float:right}
+.wrap-banner{width:100%;background-color:#f1f1f1}
+.container-banner{width:100%;height:100%;margin-left:auto;margin-right:auto;box-shadow:0 10px 30px #999}
+h2,h2 a{color:#369;font-style:bold}
+.topo-rodape{width:100%;background-color:#264549;padding-bottom:20px}
+.topo-rodape h3{color:#fff;font-size:20px}
+.topo-rodape a{color:#ececec}
+.border-equipe{border-color:#22363b;border-style:solid;border-width:6px;width:50px;height:50px;margin-right:10px}
+.rodape{width:100%;background-color:#22363b}
+.rodape p{padding:25px;color:#fff;margin:0}
+#bg-sobre{background:transparent url(../img/base_preto.jpg) repeat scroll 0 0;padding:50px;border-bottom:solid #DADFE1 1px;color:#999}
+#bg-sobre h1{font-size:45px;font-weight:500;color:#fff}
+#bg-sobre p{font-size:18px;color:#D2D7D3}
+#bg-sobre li:first-child::after{content:"/ ";padding:0 5px}
+#bg-sobre li{margin-right:-8px;margin-top:35px}
+#sobre{margin-top:40px;margin-bottom:40px}
+@media only screen and (max-width: 479px) {
+.carousel-caption h1{font-size:20px}
+.carousel-caption p{font-size:14px}
+.carousel-caption{padding-top:5px;padding-bottom:5px}
+}
+@media only screen and (max-width: 700px) {
+.bg{background-image:url(../img/background_topo-mobile.jpg);background-position:left top}
+.wrap-banner{padding:0!important}
+.bg-carousel{background-image:linear-gradient(to top,rgba(0,0,0,0.6) 0px,rgba(0,0,0,0.8) 100%)}
+.logo{width:40%;height:40%;margin-right:2%;margin-bottom:10%}
+.menu{display:none}
+.menu.active{display:block;width:100%;position:absolute;top:38px;left:0;background-color:#fff;border-bottom:solid #ccc 1px}
+.menu li{display:block}
+.menu li a,.menu .dropdown a{color:#444;width:100%;padding-left:20px;font-size:18px;display:block}
+.sub-menu .linha{background-color:#f2f2f2}
+.sub-menu.active{border:none;top:0;left:0;position:relative}
+.sub-menu.active a{padding-left:45px;font-size:16px;background-color:#f2f2f2}
+.sub-menu li a:hover{background-color:#f2f2f2}
+.social li a{top:0!important}
+.icone-menu{display:block;width:25px;padding:10px 0;position:absolute;text-indent:-9999px;top:8px;z-index:9999px;cursor:pointer}
+.icone-menu span,.icone-menu span:before,.icone-menu span:after{width:25px;height:3px;display:block;border-radius:3px;background-color:#fff;position:absolute;content:''}
+.icone-menu span:before{top:-8px}
+.icone-menu span:after{bottom:-8px}
+}
+@media only screen and (min-width: 981px) and (max-width: 1366px) {
+.container-banner{width:70%}
+.wrap-banner{padding:40px 0}
+}
+@media only screen and (min-width: 1367px) {
+.container-banner{width:60%}
+.wrap-banner{padding:50px 0}
+}
+@media screen and (min-width: 1024px) {
+.top-bottom{margin-top:60px;margin-bottom:80px}
+}
+@media screen and (max-width: 1023px) {
+.top-bottom{margin-top:10px;margin-bottom:30px;margin-top:10px;margin-bottom:30px}
+}
